@@ -70,3 +70,15 @@ CMakeFiles/printf1.dir/help.c.o: ../help.c
 CMakeFiles/printf1.dir/main.c.o: ../ft_printf.h
 CMakeFiles/printf1.dir/main.c.o: ../main.c
 
+CMakeFiles/printf1.dir/putllong.c.o: ../ft_printf.h
+CMakeFiles/printf1.dir/putllong.c.o: ../putllong.c
+
+CMakeFiles/printf1.dir/putlong.c.o: ../ft_printf.h
+CMakeFiles/printf1.dir/putlong.c.o: ../putlong.c
+
+CMakeFiles/printf1.dir/putshort.c.o: ../ft_printf.h
+CMakeFiles/printf1.dir/putshort.c.o: ../putshort.c
+
+CMakeFiles/printf1.dir/scan_conv.c.o: ../ft_printf.h
+CMakeFiles/printf1.dir/scan_conv.c.o: ../scan_conv.c
+

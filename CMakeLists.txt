@@ -30,4 +30,8 @@ add_executable(printf1
         ../../Desktop/printf0/main.c
         ../../Desktop/printf0/ft_itoa_base.c
         ../../Desktop/printf0/ft_atoi_base.c
-		../../Desktop/printf0/ft_strcmp.c)
+		../../Desktop/printf0/ft_strcmp.c
+		../../Desktop/printf0/scan_conv.c
+		../../Desktop/printf0/putllong.c
+        ../../Desktop/printf0/putlong.c
+        ../../Desktop/printf0/putshort.c)

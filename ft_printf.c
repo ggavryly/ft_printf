@@ -14,30 +14,8 @@
 
 int    scan_conv(const char *str, t_type *con, int str_len)
 {
-	if (str[str_len - 1] == 'c')
-		return (scan_c(con, str, str_len));
-	else if (str[str_len - 1] == 's')
-		return (scan_s(con, str, str_len));
-    else if (str[str_len - 1] == 'p')
-		return (scan_p(con,str,str_len));
-    else if (str[str_len - 1] == 'd')
-        return  (scan_d(con,str,str_len));
-//    else if (str[str_len - 1] == 'i')
-//        scan_i();
-//    else if (str[str_len - 1] == 'o')
-//        scan_o();
-//    else if (str[str_len - 1] == 'u')
-//        scan_u();
-//    else if (str[str_len - 1] == 'x')
-//        scan_x();
-//    else if (str[str_len - 1] == 'X')
-//        scan_x32();
-//    else if (str[str_len - 1] == 'C')
-//        scan_c32();
-//    else if (str[str_len - 1] == 'f')
-//        scan_f();
-	else if (str[str_len - 1] == '%')
-		return (scan_perc(con,str,str_len));
+	if (str[str_len - 1])
+		return (scan_all(con, str, str_len, str[str_len - 1]));
 	return (0);
 }
 
@@ -49,8 +27,8 @@ int    print_conv(char con, t_type c, va_list ap)
 		return (print_s(ap, c));
     else if (con == 'p')
 		return (print_p(ap, c));
-    else if (con == 'd')
-		return (print_d(ap, c));
+//    else if (con == 'd')
+//		return (print_d(ap, c));
 //    else if (str[str_len - 1] == 'i')
 //        scan_i();
 //    else if (str[str_len - 1] == 'o')

@@ -47,21 +47,41 @@ void	print(t_type *con, int len)
 	}
 }
 
-char    *print_int(t_type *con, long long int nbr, int base)
+
+t_flag *flag_intr(t_type con, va_list ap)
 {
-	int pri;
-	int len;
-	char *str;
+	t_flag *res;
 	
-	len = (int)ft_strlen((str = itoa_base(nbr, base , 'a')));
-	con->precision = (con->precision > len) ? (con->precision - len) : (0);
-	pri = len + ((con->precision >= 0) ? (con->precision) : (0));
-	if (con->field_width)
-	{
-		con->field_width -= pri;
-		con->print = pri + ((con->field_width < 0) ? (0) : (con->field_width));
-	}
-	else if (!con->field_width)
-		con->print = pri + ((con->field_width < 0) ? (0) : (con->field_width));
-	return (str);
+	res = (t_flag *)malloc(sizeof(t_flag));
+	initialize_flag(res);
+	if (con.hh)
+		res->hh = (char)va_arg(ap,  void *);
+	else if (con.h)
+		res->h = (short)va_arg(ap, void *);
+	else if (con.l)
+		res->l = va_arg(ap, long);
+	else if (con.ll)
+		res->ll = va_arg(ap, long long);
+	else if (con.l32)
+		res->l32 = va_arg(ap, long double);
+	else
+		res->i = va_arg(ap, int);
+	flag_value(res);
+	return (res);
+}
+
+void	flag_value(t_flag *flag)
+{
+	if (flag->i)
+		flag->value = &flag->i;
+	else if (flag->hh)
+		flag->value = &flag->hh;
+	else if (flag->h)
+		flag->value = &flag->h;
+	else if (flag->l)
+		flag->value = &flag->l;
+	else if (flag->ll)
+		flag->value = &flag->ll;
+	else if (flag->l32)
+		flag->value = &flag->l32;
 }

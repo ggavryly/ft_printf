@@ -771,6 +771,114 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/main.c.s
 .PHONY : main.c.s
 
+putllong.o: putllong.c.o
+
+.PHONY : putllong.o
+
+# target to build an object file
+putllong.c.o:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/putllong.c.o
+.PHONY : putllong.c.o
+
+putllong.i: putllong.c.i
+
+.PHONY : putllong.i
+
+# target to preprocess a source file
+putllong.c.i:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/putllong.c.i
+.PHONY : putllong.c.i
+
+putllong.s: putllong.c.s
+
+.PHONY : putllong.s
+
+# target to generate assembly for a file
+putllong.c.s:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/putllong.c.s
+.PHONY : putllong.c.s
+
+putlong.o: putlong.c.o
+
+.PHONY : putlong.o
+
+# target to build an object file
+putlong.c.o:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/putlong.c.o
+.PHONY : putlong.c.o
+
+putlong.i: putlong.c.i
+
+.PHONY : putlong.i
+
+# target to preprocess a source file
+putlong.c.i:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/putlong.c.i
+.PHONY : putlong.c.i
+
+putlong.s: putlong.c.s
+
+.PHONY : putlong.s
+
+# target to generate assembly for a file
+putlong.c.s:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/putlong.c.s
+.PHONY : putlong.c.s
+
+putshort.o: putshort.c.o
+
+.PHONY : putshort.o
+
+# target to build an object file
+putshort.c.o:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/putshort.c.o
+.PHONY : putshort.c.o
+
+putshort.i: putshort.c.i
+
+.PHONY : putshort.i
+
+# target to preprocess a source file
+putshort.c.i:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/putshort.c.i
+.PHONY : putshort.c.i
+
+putshort.s: putshort.c.s
+
+.PHONY : putshort.s
+
+# target to generate assembly for a file
+putshort.c.s:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/putshort.c.s
+.PHONY : putshort.c.s
+
+scan_conv.o: scan_conv.c.o
+
+.PHONY : scan_conv.o
+
+# target to build an object file
+scan_conv.c.o:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/scan_conv.c.o
+.PHONY : scan_conv.c.o
+
+scan_conv.i: scan_conv.c.i
+
+.PHONY : scan_conv.i
+
+# target to preprocess a source file
+scan_conv.c.i:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/scan_conv.c.i
+.PHONY : scan_conv.c.i
+
+scan_conv.s: scan_conv.c.s
+
+.PHONY : scan_conv.s
+
+# target to generate assembly for a file
+scan_conv.c.s:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/scan_conv.c.s
+.PHONY : scan_conv.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -852,6 +960,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... putllong.o"
+	@echo "... putllong.i"
+	@echo "... putllong.s"
+	@echo "... putlong.o"
+	@echo "... putlong.i"
+	@echo "... putlong.s"
+	@echo "... putshort.o"
+	@echo "... putshort.i"
+	@echo "... putshort.s"
+	@echo "... scan_conv.o"
+	@echo "... scan_conv.i"
+	@echo "... scan_conv.s"
 .PHONY : help
 
 

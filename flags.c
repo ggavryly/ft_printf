@@ -30,3 +30,16 @@ void    initialize_type(t_type *con)
     con->l32 = 0;
     con->print = 0;
 }
+
+void	initialize_flag(t_flag *flag)
+{
+	flag->value = NULL;
+	flag->i = 0;
+	flag->d = 0;
+	flag->f = 0;
+	flag->h = 0;
+	flag->hh = 0;
+	flag->l = 0;
+	flag->l32 = 0;
+	flag->ll = 0;
+}

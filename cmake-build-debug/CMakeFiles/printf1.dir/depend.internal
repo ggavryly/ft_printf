@@ -70,3 +70,15 @@ CMakeFiles/printf1.dir/help.c.o
 CMakeFiles/printf1.dir/main.c.o
  /Users/ggavryly/Desktop/printf0/ft_printf.h
  /Users/ggavryly/Desktop/printf0/main.c
+CMakeFiles/printf1.dir/putllong.c.o
+ /Users/ggavryly/Desktop/printf0/ft_printf.h
+ /Users/ggavryly/Desktop/printf0/putllong.c
+CMakeFiles/printf1.dir/putlong.c.o
+ /Users/ggavryly/Desktop/printf0/ft_printf.h
+ /Users/ggavryly/Desktop/printf0/putlong.c
+CMakeFiles/printf1.dir/putshort.c.o
+ /Users/ggavryly/Desktop/printf0/ft_printf.h
+ /Users/ggavryly/Desktop/printf0/putshort.c
+CMakeFiles/printf1.dir/scan_conv.c.o
+ /Users/ggavryly/Desktop/printf0/ft_printf.h
+ /Users/ggavryly/Desktop/printf0/scan_conv.c

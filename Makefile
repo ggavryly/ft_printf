@@ -9,10 +9,13 @@ SRC =	ft_strlen.c \
 		ft_putchar.c \
 		ft_putstr.c \
 		ft_putnbr.c \
+		scan_conv.c \
 		conv_c.c \
 		conv_s.c \
 		conv_p.c \
-		conv_d.c \
+		putllong.c \
+		putlong.c \
+		putshort.c \
 		conv_perc.c \
 		ft_printf.c \
 		flags.c \

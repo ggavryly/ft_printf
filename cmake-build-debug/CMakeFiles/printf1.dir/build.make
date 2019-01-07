@@ -369,6 +369,58 @@ CMakeFiles/printf1.dir/ft_strcmp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf1.dir/ft_strcmp.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggavryly/Desktop/printf0/ft_strcmp.c -o CMakeFiles/printf1.dir/ft_strcmp.c.s
 
+CMakeFiles/printf1.dir/scan_conv.c.o: CMakeFiles/printf1.dir/flags.make
+CMakeFiles/printf1.dir/scan_conv.c.o: ../scan_conv.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/printf1.dir/scan_conv.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf1.dir/scan_conv.c.o   -c /Users/ggavryly/Desktop/printf0/scan_conv.c
+
+CMakeFiles/printf1.dir/scan_conv.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf1.dir/scan_conv.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ggavryly/Desktop/printf0/scan_conv.c > CMakeFiles/printf1.dir/scan_conv.c.i
+
+CMakeFiles/printf1.dir/scan_conv.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf1.dir/scan_conv.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggavryly/Desktop/printf0/scan_conv.c -o CMakeFiles/printf1.dir/scan_conv.c.s
+
+CMakeFiles/printf1.dir/putllong.c.o: CMakeFiles/printf1.dir/flags.make
+CMakeFiles/printf1.dir/putllong.c.o: ../putllong.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/printf1.dir/putllong.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf1.dir/putllong.c.o   -c /Users/ggavryly/Desktop/printf0/putllong.c
+
+CMakeFiles/printf1.dir/putllong.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf1.dir/putllong.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ggavryly/Desktop/printf0/putllong.c > CMakeFiles/printf1.dir/putllong.c.i
+
+CMakeFiles/printf1.dir/putllong.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf1.dir/putllong.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggavryly/Desktop/printf0/putllong.c -o CMakeFiles/printf1.dir/putllong.c.s
+
+CMakeFiles/printf1.dir/putlong.c.o: CMakeFiles/printf1.dir/flags.make
+CMakeFiles/printf1.dir/putlong.c.o: ../putlong.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/printf1.dir/putlong.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf1.dir/putlong.c.o   -c /Users/ggavryly/Desktop/printf0/putlong.c
+
+CMakeFiles/printf1.dir/putlong.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf1.dir/putlong.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ggavryly/Desktop/printf0/putlong.c > CMakeFiles/printf1.dir/putlong.c.i
+
+CMakeFiles/printf1.dir/putlong.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf1.dir/putlong.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggavryly/Desktop/printf0/putlong.c -o CMakeFiles/printf1.dir/putlong.c.s
+
+CMakeFiles/printf1.dir/putshort.c.o: CMakeFiles/printf1.dir/flags.make
+CMakeFiles/printf1.dir/putshort.c.o: ../putshort.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/printf1.dir/putshort.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf1.dir/putshort.c.o   -c /Users/ggavryly/Desktop/printf0/putshort.c
+
+CMakeFiles/printf1.dir/putshort.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf1.dir/putshort.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ggavryly/Desktop/printf0/putshort.c > CMakeFiles/printf1.dir/putshort.c.i
+
+CMakeFiles/printf1.dir/putshort.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf1.dir/putshort.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggavryly/Desktop/printf0/putshort.c -o CMakeFiles/printf1.dir/putshort.c.s
+
 # Object files for target printf1
 printf1_OBJECTS = \
 "CMakeFiles/printf1.dir/flags.c.o" \
@@ -394,7 +446,11 @@ printf1_OBJECTS = \
 "CMakeFiles/printf1.dir/main.c.o" \
 "CMakeFiles/printf1.dir/ft_itoa_base.c.o" \
 "CMakeFiles/printf1.dir/ft_atoi_base.c.o" \
-"CMakeFiles/printf1.dir/ft_strcmp.c.o"
+"CMakeFiles/printf1.dir/ft_strcmp.c.o" \
+"CMakeFiles/printf1.dir/scan_conv.c.o" \
+"CMakeFiles/printf1.dir/putllong.c.o" \
+"CMakeFiles/printf1.dir/putlong.c.o" \
+"CMakeFiles/printf1.dir/putshort.c.o"
 
 # External object files for target printf1
 printf1_EXTERNAL_OBJECTS =
@@ -423,9 +479,13 @@ printf1: CMakeFiles/printf1.dir/main.c.o
 printf1: CMakeFiles/printf1.dir/ft_itoa_base.c.o
 printf1: CMakeFiles/printf1.dir/ft_atoi_base.c.o
 printf1: CMakeFiles/printf1.dir/ft_strcmp.c.o
+printf1: CMakeFiles/printf1.dir/scan_conv.c.o
+printf1: CMakeFiles/printf1.dir/putllong.c.o
+printf1: CMakeFiles/printf1.dir/putlong.c.o
+printf1: CMakeFiles/printf1.dir/putshort.c.o
 printf1: CMakeFiles/printf1.dir/build.make
 printf1: CMakeFiles/printf1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking C executable printf1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking C executable printf1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/printf1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

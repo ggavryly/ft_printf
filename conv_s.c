@@ -12,63 +12,15 @@
 
 #include "ft_printf.h"
 
-int    scan_s(t_type *con, const char *str, int str_len)
-{
-    int i;
-
-    i = 0;
-    initialize_type(con);
-    con->conversion = 's';
-    con->right_ali = 1;
-    while (i < str_len - 1 && str[i])
-    {
-        if (str[i] == '#' || str[i] == '+')
-            i++;
-        else if (str[i] == '0')
-        {
-            con->zero_pad = 16;
-            i++;
-        }
-        else if (str[i] >= '1' && str[i] <= '9')
-        {
-            con->field_width = ft_atoi(str + i);
-            while (str[i] >= '0' && str[i] <= '9')
-                i++;
-        }
-        else if (str[i] == '.')
-        {
-        	con->precision = ft_atoi(str + (++i));
-        	if (!con->precision)
-        		con->precision = -1;
-	        while (str[i] >= '0' && str[i] <= '9')
-		        i++;
-        }
-        else if (str[i] == '-')
-        {
-            con->left_ali = 1;
-            con->right_ali = 0;
-            i++;
-        }
-        else
-            i++;
-    }
-    return (con->conversion);
-}
-
 int    print_s(va_list ap, t_type con)
 {
-    int i;
     int len;
     char *c;
 
-    i = 0;
     c = va_arg(ap, char*);
     len = ft_strlen(c);
-    if (!c)
-	{
-		print_null();
-		return (6);
-	}
+    if (!c || con.precision == -1)
+		return (print_null(con));
     print(&con, len);
     if (con.left_ali && (*c || con.field_width))
     {
@@ -91,7 +43,25 @@ int    print_s(va_list ap, t_type con)
     return (con.print);
 }
 
-void	print_null(void)
+int		print_null(t_type con)
 {
-	ft_putstr("(null)");
+	char *k;
+	int i;
+
+	k = "(null)";
+	i = 0;
+	if (con.precision == -1)
+		return (0);
+	else
+	{
+		if (con.precision)
+		{
+			while (k[i] && con.precision--)
+				ft_putchar(k[i++]);
+			return (i);
+		}
+		else
+			ft_putstr("(null)");
+	}
+	return (6);
 }

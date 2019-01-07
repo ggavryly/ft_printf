@@ -28,6 +28,10 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ggavryly/Desktop/printf0/ft_strlen.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_strlen.c.o"
   "/Users/ggavryly/Desktop/printf0/help.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/help.c.o"
   "/Users/ggavryly/Desktop/printf0/main.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/main.c.o"
+  "/Users/ggavryly/Desktop/printf0/putllong.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/putllong.c.o"
+  "/Users/ggavryly/Desktop/printf0/putlong.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/putlong.c.o"
+  "/Users/ggavryly/Desktop/printf0/putshort.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/putshort.c.o"
+  "/Users/ggavryly/Desktop/printf0/scan_conv.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/scan_conv.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

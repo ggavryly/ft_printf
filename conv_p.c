@@ -12,47 +12,6 @@
 
 #include "ft_printf.h"
 
-int    scan_p(t_type *con, const char *str, int str_len)
-{
-	int i;
-	
-	i = 0;
-	initialize_type(con);
-	con->conversion = 'p';
-	con->right_ali = 1;
-	while (i < str_len - 1 && str[i])
-	{
-		if (str[i] == '0')
-		{
-			con->zero_pad = 16;
-			i++;
-		}
-		else if (str[i] >= '1' && str[i] <= '9')
-		{
-			con->field_width = ft_atoi(str + i);
-			while (str[i] >= '0' && str[i] <= '9')
-				i++;
-		}
-		else if (str[i] == '.')
-		{
-			con->precision = ft_atoi(str + (++i));
-			if (!con->precision)
-				con->precision = -1;
-			while (str[i] >= '0' && str[i] <= '9')
-				i++;
-		}
-		else if (str[i] == '-')
-		{
-			con->left_ali = 1;
-			con->right_ali = 0;
-			i++;
-		}
-		else
-			i++;
-	}
-	return (con->conversion);
-}
-
 int    print_p(va_list ap, t_type con)
 {
 	long long c;
