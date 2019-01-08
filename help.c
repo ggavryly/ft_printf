@@ -48,40 +48,20 @@ void	print(t_type *con, int len)
 }
 
 
-t_flag *flag_intr(t_type con, va_list ap)
+intmax_t	flag_intr(t_type con, va_list ap)
 {
-	t_flag *res;
+	intmax_t k;
 	
-	res = (t_flag *)malloc(sizeof(t_flag));
-	initialize_flag(res);
+	k = 0;
 	if (con.hh)
-		res->hh = (char)va_arg(ap,  void *);
+		k = (char)va_arg(ap,  int);
 	else if (con.h)
-		res->h = (short)va_arg(ap, void *);
+		k = (short)va_arg(ap, int);
 	else if (con.l)
-		res->l = va_arg(ap, long);
+		k = va_arg(ap, long);
 	else if (con.ll)
-		res->ll = va_arg(ap, long long);
-	else if (con.l32)
-		res->l32 = va_arg(ap, long double);
+		k = va_arg(ap, long long);
 	else
-		res->i = va_arg(ap, int);
-	flag_value(res);
-	return (res);
-}
-
-void	flag_value(t_flag *flag)
-{
-	if (flag->i)
-		flag->value = &flag->i;
-	else if (flag->hh)
-		flag->value = &flag->hh;
-	else if (flag->h)
-		flag->value = &flag->h;
-	else if (flag->l)
-		flag->value = &flag->l;
-	else if (flag->ll)
-		flag->value = &flag->ll;
-	else if (flag->l32)
-		flag->value = &flag->l32;
+		k = va_arg(ap, int);
+	return (k);
 }

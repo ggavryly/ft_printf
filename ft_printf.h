@@ -17,6 +17,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdint.h>
 #include <limits.h>
 
 typedef struct  s_conv
@@ -37,19 +38,6 @@ typedef struct  s_conv
 	unsigned int         l32 : 1;
     int         print;
 }               t_type;
-
-typedef struct s_type
-{
-	char   hh;
-	short   h;
-	long    l;
-	long long ll;
-	int     i;
-	double  d;
-	float   f;
-	long double l32;
-	void *	value;
-}              t_flag;
 
 int     ft_printf(const char *format, ...);
 
@@ -74,17 +62,16 @@ void    scan_flag(const char *str, int *iter, t_type *con);
 
 int     con_len(const char *str);
 void    initialize_type(t_type *con);
-void	initialize_flag(t_flag *flag);
-t_flag	*flag_intr(t_type con, va_list ap);
-void	flag_value(t_flag *flag);
-void	ft_putllong(long long val);
-void	ft_putlong(long val);
-void	ft_putshort(short val);
+intmax_t	flag_intr(t_type con, va_list ap);
+void	ft_putllong(long long val, int sign);
+void	ft_putlong(long val, int sign);
+void	ft_putshort(short val, int sign);
 
 int    print_conv(char con, t_type c, va_list ap);
 int    print_p(va_list ap, t_type con);
 int    print_s(va_list ap, t_type con);
 int    print_c(va_list ap, t_type con);
+int 	print_d(va_list ap, t_type con);
 int    print_perc(t_type con);
 void	print(t_type *con, int len);
 int    print_null(t_type con);

@@ -12,22 +12,27 @@
 
 #include "ft_printf.h"
 
-static unsigned short	init(short val)
+static unsigned short	init(short val, int *sign)
 {
 	unsigned short res;
 
 	res = 0;
 	if (val < 0)
 	{
-		ft_putchar('-');
-		res = (unsigned short)-val;
+		if (*sign)
+			*sign = 3;
+		res = (unsigned short) -val;
 	}
 	else
-		res = (unsigned short)val;
+	{
+		if (*sign)
+			*sign = 1;
+		res = (unsigned short) val;
+	}
 	return (res);
 }
 
-static char *	str_mem(unsigned short res, int *count1)
+static char *	str_mem(unsigned short res, int *count1, int sign)
 {
 	char *str;
 	int count;
@@ -35,6 +40,8 @@ static char *	str_mem(unsigned short res, int *count1)
 	str = NULL;
 	count = 0;
 	if (res == 0)
+		count++;
+	if (sign)
 		count++;
 	while (res)
 	{
@@ -45,15 +52,15 @@ static char *	str_mem(unsigned short res, int *count1)
 	*count1 = count;
 	return (str);
 }
-void	ft_putshort(short val)
+void	ft_putshort(short val, int sign)
 {
 	unsigned short print;
 	int count;
 	char *str;
 
 	count = 0;
-	print = init(val);
-	str = str_mem(print, &count);
+	print = init(val, &sign);
+	str = str_mem(print, &count, sign);
 	str[count--] = '\0';
 	while (count >= 0)
 	{
@@ -64,6 +71,8 @@ void	ft_putshort(short val)
 		print /= 10;
 		count--;
 	}
+	if (sign)
+		str[0] = 42 + sign;
 	ft_putstr(str);
 	free(str);
 }

@@ -5,7 +5,7 @@
 int main(void)
 {
     ft_putstr("-->");
-    printf("<-- ft_printf | exit code - %d\n-->", ft_printf("%.s", "egg"));
-    printf("<-- printf    | exit code - %d",         printf("%.s", "ege"));
+    printf("<-- ft_printf | exit code - %d\n-->", ft_printf("%.d", INT_MIN));
+    printf("<-- printf    | exit code - %d",         printf("%+.5d", -43));
     return (0);
 }

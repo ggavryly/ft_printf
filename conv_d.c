@@ -13,21 +13,29 @@
 #include "ft_printf.h"
 
 
+static void	sign(intmax_t k,t_type *con)
+{
+	if ((con->sign))
+	{
+		ft_putchar('-');
+			ft_putchar('+');
+		con->print++;
+	}
+}
 
 int 	print_d(va_list ap, t_type con)
 {
-	t_flag *nbr;
+	intmax_t k;
 
-	nbr = flag_intr(con, ap);
-	flag_value(nbr);
+	k = flag_intr(con, ap);
 	if (con.left_ali)
 	{
-
+		sign(k, &con);
 
 	}
 	else if (con.right_ali)
 	{
-
+		sign(k, &con);
 	}
 
 }
