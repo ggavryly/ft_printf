@@ -65,3 +65,25 @@ intmax_t	flag_intr(t_type con, va_list ap)
 		k = va_arg(ap, int);
 	return (k);
 }
+
+void	zero_case_help(t_type *con)
+{
+	int prec;
+	int field;
+	int print;
+
+	prec = con->precision;
+	field = con->field_width;
+	print = (!con->precision) ? 1 : 0;
+	if (con->sign || con->space)
+		print++;
+	if (prec > 0)
+		print += prec;
+	if (field > print)
+	{
+		field -= print;
+		con->print += field;
+		while (field-- > 0)
+			ft_putchar(' ');
+	}
+}

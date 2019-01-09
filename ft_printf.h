@@ -42,15 +42,15 @@ typedef struct  s_conv
 int     ft_printf(const char *format, ...);
 
 void 	ft_putchar(char c);
-int	ft_atoi(const char *str);
-char			*ft_itoa(int n);
-void			ft_putnbr(int n);
+int		ft_atoi(const char *str);
+char	*ft_itoa(int n);
+void	ft_putnbr(intmax_t k, int sign);
 void	ft_putstr(char const *s);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *src);
 int		ft_strcmp(const char *s1, const char *s2);
-char	*itoa_base(long long int value, int base, char a_a32);
+char	*itoa_base(intmax_t value, uintmax_t base, char a_a32);
 long long int    atoi_base(char *nbr, int base, char a_a32);
 void    ft_putnstr(const char *str, int n);
 
@@ -66,12 +66,16 @@ intmax_t	flag_intr(t_type con, va_list ap);
 void	ft_putllong(long long val, int sign);
 void	ft_putlong(long val, int sign);
 void	ft_putshort(short val, int sign);
+void	zero_case_right(t_type *con, char *str);
+void	zero_case_left(t_type *con, char *str);
+void	zero_case_help(t_type *con);
 
 int    print_conv(char con, t_type c, va_list ap);
 int    print_p(va_list ap, t_type con);
 int    print_s(va_list ap, t_type con);
 int    print_c(va_list ap, t_type con);
 int 	print_d(va_list ap, t_type con);
+int 	print_i(va_list ap, t_type con);
 int    print_perc(t_type con);
 void	print(t_type *con, int len);
 int    print_null(t_type con);

@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-unsigned long long	swap_sign(long long value, int *sign)
+static uintmax_t	swap_sign(intmax_t value, int *sign)
 {
-	unsigned long long res;
+	uintmax_t res;
 
 	res = 0;
 	if (value < 0)
@@ -27,22 +27,23 @@ unsigned long long	swap_sign(long long value, int *sign)
 	return (res);
 }
 
-char	*itoa_base(long long int value, int base, char a_a32)
+char	*itoa_base(intmax_t value, uintmax_t  base, char a_a32)
 {
-	int					i;
-	char				*str;
-	unsigned long long  tmp;
+	int			i;
+	char		*str;
+	uintmax_t	tmp;
 
 	int             sign;
 	
 	i = 0;
 	sign = 0;
 	tmp = swap_sign(value, &sign);
-	while (value >= base)
+	while (tmp >= base)
 	{
-		value = value / base;
+		tmp /= base;
 		i++;
 	}
+	tmp = (value < 0) ? (-value) : value;
 	if (!(str = (char *)malloc(sizeof(char) * (i + 1 + sign))))
 		return (NULL);
 	str[i + 1 + sign] = '\0';

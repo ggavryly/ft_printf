@@ -157,16 +157,10 @@
 		<Unit filename="/Users/ggavryly/Desktop/printf0/main.c">
 			<Option target="printf1"/>
 		</Unit>
-		<Unit filename="/Users/ggavryly/Desktop/printf0/putllong.c">
-			<Option target="printf1"/>
-		</Unit>
-		<Unit filename="/Users/ggavryly/Desktop/printf0/putlong.c">
-			<Option target="printf1"/>
-		</Unit>
-		<Unit filename="/Users/ggavryly/Desktop/printf0/putshort.c">
-			<Option target="printf1"/>
-		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/scan_conv.c">
+			<Option target="printf1"/>
+		</Unit>
+		<Unit filename="/Users/ggavryly/Desktop/printf0/zero_case.c">
 			<Option target="printf1"/>
 		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/CMakeLists.txt">

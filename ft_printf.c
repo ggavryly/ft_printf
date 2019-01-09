@@ -29,8 +29,8 @@ int    print_conv(char con, t_type c, va_list ap)
 		return (print_p(ap, c));
     else if (con == 'd')
 		return (print_d(ap, c));
-//    else if (str[str_len - 1] == 'i')
-//        scan_i();
+	else if (con == 'i')
+		return (print_i(ap, c));
 //    else if (str[str_len - 1] == 'o')
 //        scan_o();
 //    else if (str[str_len - 1] == 'u')

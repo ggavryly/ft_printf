@@ -12,24 +12,67 @@
 
 #include "ft_printf.h"
 
-static void		ft_minus(long int *n)
+static uintmax_t	init(intmax_t val, int *sign)
 {
-	ft_putchar('-');
-	*n *= -1;
-}
+	uintmax_t res;
 
-void			ft_putnbr(int n)
-{
-	long int t;
-
-	t = n;
-	if (t < 0)
-		ft_minus(&t);
-	if (t >= 10)
+	res = 0;
+	if (val < 0)
 	{
-		ft_putnbr(t / 10);
-		ft_putchar(t % 10 + '0');
+		if (*sign)
+			*sign = 3;
+		res = (uintmax_t) -val;
 	}
 	else
-		ft_putchar(t + '0');
+	{
+		if (*sign)
+			*sign = 1;
+		res = (uintmax_t) val;
+	}
+	return (res);
+}
+
+static char *	str_mem(uintmax_t res, int *count1, int sign)
+{
+	char *str;
+	int count;
+
+	str = NULL;
+	count = 0;
+	if (res == 0)
+		count++;
+	if (sign)
+		count++;
+	while (res)
+	{
+		res /= 10;
+		count++;
+	}
+	str = (char *)malloc(count + 1);
+	*count1 = count;
+	return (str);
+}
+void	ft_putnbr(intmax_t val, int sign)
+{
+	uintmax_t print;
+	int count;
+	char *str;
+
+	count = 0;
+	print = init(val, &sign);
+	str = str_mem(print, &count, sign);
+	str[count--] = '\0';
+	while (count >= 0)
+	{
+		if (print >= 10)
+			str[count] = (char)(print % 10 + '0');
+		else
+			str[count] = (char)(print + '0');
+		print /= 10;
+		count--;
+	}
+	if (sign)
+		str[0] = 42 + sign;
+	ft_putstr(str);
+	free(str);
 }

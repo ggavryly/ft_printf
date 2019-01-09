@@ -24,9 +24,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf1.dir/ft_atoi_base.c.o"
   "CMakeFiles/printf1.dir/ft_strcmp.c.o"
   "CMakeFiles/printf1.dir/scan_conv.c.o"
-  "CMakeFiles/printf1.dir/putllong.c.o"
-  "CMakeFiles/printf1.dir/putlong.c.o"
-  "CMakeFiles/printf1.dir/putshort.c.o"
+  "CMakeFiles/printf1.dir/zero_case.c.o"
   "printf1.pdb"
   "printf1"
 )

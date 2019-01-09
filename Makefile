@@ -13,9 +13,9 @@ SRC =	ft_strlen.c \
 		conv_c.c \
 		conv_s.c \
 		conv_p.c \
-		putllong.c \
-		putlong.c \
-		putshort.c \
+		conv_d.c \
+		conv_i.c \
+		zero_case.c \
 		conv_perc.c \
 		ft_printf.c \
 		flags.c \

@@ -17,6 +17,7 @@ int    print_p(va_list ap, t_type con)
 	long long c;
 	long long tmp;
 	int i;
+	char *str;
 	
 	c = (long long)va_arg(ap, void*);
 	i = 0;
@@ -44,7 +45,9 @@ int    print_p(va_list ap, t_type con)
 		while (--con.field_width >= 0)
 			ft_putchar(' ');
 		ft_putstr("0x");
-		ft_putstr(itoa_base(c, 16, 'a'));
+		str = itoa_base(c, 16, 'a');
+		ft_putstr(str);
+		free(str);
 	}
 	con.print += i;
 	return (con.print);

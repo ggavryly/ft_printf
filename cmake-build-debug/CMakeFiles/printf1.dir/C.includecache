@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/ggavryly/Desktop/printf0/flags.c
-ft_printf.h
-/Users/ggavryly/Desktop/printf0/ft_printf.h
-
 /Users/ggavryly/Desktop/printf0/ft_printf.h
 stdarg.h
 -
@@ -23,4 +19,12 @@ stdint.h
 -
 limits.h
 -
+
+/Users/ggavryly/Desktop/printf0/main.c
+stdio.h
+-
+limits.h
+-
+ft_printf.h
+/Users/ggavryly/Desktop/printf0/ft_printf.h
 

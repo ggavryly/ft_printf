@@ -11,11 +11,3 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int     scan_x(t_type *con, const char *str, int str_len)
-{
-    int i;
-
-    i = 0;
-    initialize_type(con);
-}
