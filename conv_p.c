@@ -12,43 +12,42 @@
 
 #include "ft_printf.h"
 
+static void	field(t_type *con, char *str)
+{
+	int print;
+	int field;
+
+	print = ft_strlen(str) + 2;
+	con->print = print;
+	field = con->field_width;
+	if (field > print)
+	{
+		field -= print;
+		con->print += field;
+		while (field-- > 0)
+			ft_putchar(' ');
+	}
+}
+
 int    print_p(va_list ap, t_type con)
 {
-	long long c;
-	long long tmp;
-	int i;
+	uintmax_t k;
 	char *str;
 	
-	c = (long long)va_arg(ap, void*);
-	i = 0;
-	tmp = c;
-	con.print = 3;
-	while (tmp >= 16)
-	{
-		tmp = tmp / 16;
-		i++;
-	}
-	if (con.field_width > i + 3)
-	{
-		con.field_width -= i + 3;
-		con.print += con.field_width;
-	}
+	k = (uintmax_t)va_arg(ap, void *);
+	str = itoa_base_u(k, 16, 'a');
 	if (con.left_ali)
 	{
 		ft_putstr("0x");
-		ft_putstr(itoa_base(c, 16, 'a'));
-		while (--con.field_width >= 0)
-			ft_putchar(' ');
+		ft_putstr(str);
+		field(&con, str);
 	}
 	else if (con.right_ali)
 	{
-		while (--con.field_width >= 0)
-			ft_putchar(' ');
+		field(&con, str);
 		ft_putstr("0x");
-		str = itoa_base(c, 16, 'a');
 		ft_putstr(str);
-		free(str);
 	}
-	con.print += i;
+	free(str);
 	return (con.print);
 }
