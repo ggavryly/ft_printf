@@ -74,7 +74,7 @@ int 	print_i(va_list ap, t_type con)
 	intmax_t k;
 	char *str;
 
-	k = flag_intr(con, ap);
+	k = flag_intdi(con, ap);
 	str = itoa_base(k, 10, 'a');
 	if (con.left_ali)
 	{

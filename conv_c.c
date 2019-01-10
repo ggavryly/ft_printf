@@ -12,6 +12,26 @@
 
 #include "ft_printf.h"
 
+static void	print(t_type *con, int len)
+{
+	int pri;
+
+	pri = len;
+	if (con->field_width)
+	{
+		if (con->precision <= len && len && con->precision != 0)
+			pri = (con->precision == -1) ? (0) : con->precision;
+		con->field_width -= pri;
+		con->print = pri + ((con->field_width < 0) ? (0) : (con->field_width));
+	}
+	else if (!con->field_width)
+	{
+		if (con->precision < len && len)
+			pri = (con->precision) ? (con->precision) : (pri);
+		con->print = pri + ((con->field_width < 0) ? (0) : (con->field_width));
+	}
+}
+
 int    print_c(va_list ap, t_type con)
 {
     char c;

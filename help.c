@@ -27,28 +27,7 @@ void    ft_putnstr(const char *str, int n)
     }
 }
 
-void	print(t_type *con, int len)
-{
-	int pri;
-	
-	pri = len;
-	if (con->field_width)
-	{
-		if (con->precision <= len && len && con->precision != 0)
-			pri = (con->precision == -1) ? (0) : con->precision;
-		con->field_width -= pri;
-		con->print = pri + ((con->field_width < 0) ? (0) : (con->field_width));
-	}
-	else if (!con->field_width)
-	{
-		if (con->precision < len && len)
-			pri = (con->precision) ? (con->precision) : (pri);
-		con->print = pri + ((con->field_width < 0) ? (0) : (con->field_width));
-	}
-}
-
-
-intmax_t	flag_intr(t_type con, va_list ap)
+intmax_t	flag_intdi(t_type con, va_list ap)
 {
 	intmax_t k;
 	
@@ -66,7 +45,44 @@ intmax_t	flag_intr(t_type con, va_list ap)
 	return (k);
 }
 
-void	zero_case_help(t_type *con)
+void	zero_field(t_type *con, int print, int *flag)
+{
+	int field;
+
+	field = con->field_width;
+	if (con->space || con->sign)
+	{
+		if (con->space)
+			ft_putchar(' ');
+		else if (con->sign)
+			ft_putchar('+');
+		*flag = 1;
+	}
+	field -= print;
+	con->print += field;
+	while (field-- > 0)
+		ft_putchar('0');
+
+}
+
+intmax_t	flag_intoux(t_type con, va_list ap)
+{
+	uintmax_t	k;
+
+	if (con.hh)
+		k = (unsigned char)va_arg(ap,  int);
+	else if (con.h)
+		k = (unsigned short)va_arg(ap, int);
+	else if (con.l)
+		k = (unsigned long)va_arg(ap, long);
+	else if (con.ll)
+		k = (unsigned long long)va_arg(ap, long long);
+	else
+		k = (unsigned int)va_arg(ap, int);
+	return (k);
+}
+
+void	zero_case_help(t_type *con, int *flag)
 {
 	int prec;
 	int field;
@@ -79,11 +95,13 @@ void	zero_case_help(t_type *con)
 		print++;
 	if (prec > 0)
 		print += prec;
-	if (field > print)
+	if (field > print && !con->zero_pad)
 	{
 		field -= print;
 		con->print += field;
 		while (field-- > 0)
-			ft_putchar(' ');
+			ft_putchar(' ' + ((con->precision) ? (0) : con->zero_pad));
 	}
+	else if (field > print)
+		zero_field(con, print, flag);
 }

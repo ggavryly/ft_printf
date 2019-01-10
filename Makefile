@@ -15,6 +15,9 @@ SRC =	ft_strlen.c \
 		conv_p.c \
 		conv_d.c \
 		conv_i.c \
+		conv_x.c \
+		conv_o.c \
+		conv_u.c \
 		zero_case.c \
 		conv_perc.c \
 		ft_printf.c \
@@ -29,7 +32,7 @@ SRO = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	gcc -c -Wall -Wextra -Werror $(SRC)
+	gcc -c -Wall -Wextra -Werror $(SRC) -I ft_printf.h
 	ar rcs $(NAME) $(SRO)
 
 clean:

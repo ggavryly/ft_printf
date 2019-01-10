@@ -27,7 +27,7 @@ static uintmax_t	init(intmax_t val, int *sign)
 	{
 		if (*sign)
 			*sign = 1;
-		res = (uintmax_t) val;
+		res = (uintmax_t)val;
 	}
 	return (res);
 }

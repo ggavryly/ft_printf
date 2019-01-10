@@ -7,7 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf1.dir/conv_i.c.o"
   "CMakeFiles/printf1.dir/conv_o.c.o"
   "CMakeFiles/printf1.dir/conv_x.c.o"
-  "CMakeFiles/printf1.dir/conv_x32.c.o"
+  "CMakeFiles/printf1.dir/conv_u.c.o"
   "CMakeFiles/printf1.dir/conv_perc.c.o"
   "CMakeFiles/printf1.dir/help.c.o"
   "CMakeFiles/printf1.dir/ft_strlen.c.o"

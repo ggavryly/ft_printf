@@ -15,7 +15,7 @@ add_executable(printf1
         ../../Desktop/printf0/conv_i.c
         ../../Desktop/printf0/conv_o.c
         ../../Desktop/printf0/conv_x.c
-        ../../Desktop/printf0/conv_x32.c
+		../../Desktop/printf0/conv_u.c
         ../../Desktop/printf0/conv_perc.c
         ../../Desktop/printf0/help.c
         ../../Desktop/printf0/ft_strlen.c

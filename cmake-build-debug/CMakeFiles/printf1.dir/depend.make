@@ -11,6 +11,7 @@ CMakeFiles/printf1.dir/conv_i.c.o: ../conv_i.c
 CMakeFiles/printf1.dir/conv_i.c.o: ../ft_printf.h
 
 CMakeFiles/printf1.dir/conv_o.c.o: ../conv_o.c
+CMakeFiles/printf1.dir/conv_o.c.o: ../ft_printf.h
 
 CMakeFiles/printf1.dir/conv_p.c.o: ../conv_p.c
 CMakeFiles/printf1.dir/conv_p.c.o: ../ft_printf.h
@@ -21,10 +22,11 @@ CMakeFiles/printf1.dir/conv_perc.c.o: ../ft_printf.h
 CMakeFiles/printf1.dir/conv_s.c.o: ../conv_s.c
 CMakeFiles/printf1.dir/conv_s.c.o: ../ft_printf.h
 
+CMakeFiles/printf1.dir/conv_u.c.o: ../conv_u.c
+CMakeFiles/printf1.dir/conv_u.c.o: ../ft_printf.h
+
 CMakeFiles/printf1.dir/conv_x.c.o: ../conv_x.c
 CMakeFiles/printf1.dir/conv_x.c.o: ../ft_printf.h
-
-CMakeFiles/printf1.dir/conv_x32.c.o: ../conv_x32.c
 
 CMakeFiles/printf1.dir/flags.c.o: ../flags.c
 CMakeFiles/printf1.dir/flags.c.o: ../ft_printf.h

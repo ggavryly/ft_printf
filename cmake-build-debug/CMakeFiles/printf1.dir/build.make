@@ -161,18 +161,18 @@ CMakeFiles/printf1.dir/conv_x.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf1.dir/conv_x.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggavryly/Desktop/printf0/conv_x.c -o CMakeFiles/printf1.dir/conv_x.c.s
 
-CMakeFiles/printf1.dir/conv_x32.c.o: CMakeFiles/printf1.dir/flags.make
-CMakeFiles/printf1.dir/conv_x32.c.o: ../conv_x32.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/printf1.dir/conv_x32.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf1.dir/conv_x32.c.o   -c /Users/ggavryly/Desktop/printf0/conv_x32.c
+CMakeFiles/printf1.dir/conv_u.c.o: CMakeFiles/printf1.dir/flags.make
+CMakeFiles/printf1.dir/conv_u.c.o: ../conv_u.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/printf1.dir/conv_u.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf1.dir/conv_u.c.o   -c /Users/ggavryly/Desktop/printf0/conv_u.c
 
-CMakeFiles/printf1.dir/conv_x32.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf1.dir/conv_x32.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ggavryly/Desktop/printf0/conv_x32.c > CMakeFiles/printf1.dir/conv_x32.c.i
+CMakeFiles/printf1.dir/conv_u.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf1.dir/conv_u.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ggavryly/Desktop/printf0/conv_u.c > CMakeFiles/printf1.dir/conv_u.c.i
 
-CMakeFiles/printf1.dir/conv_x32.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf1.dir/conv_x32.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggavryly/Desktop/printf0/conv_x32.c -o CMakeFiles/printf1.dir/conv_x32.c.s
+CMakeFiles/printf1.dir/conv_u.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf1.dir/conv_u.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggavryly/Desktop/printf0/conv_u.c -o CMakeFiles/printf1.dir/conv_u.c.s
 
 CMakeFiles/printf1.dir/conv_perc.c.o: CMakeFiles/printf1.dir/flags.make
 CMakeFiles/printf1.dir/conv_perc.c.o: ../conv_perc.c
@@ -405,7 +405,7 @@ printf1_OBJECTS = \
 "CMakeFiles/printf1.dir/conv_i.c.o" \
 "CMakeFiles/printf1.dir/conv_o.c.o" \
 "CMakeFiles/printf1.dir/conv_x.c.o" \
-"CMakeFiles/printf1.dir/conv_x32.c.o" \
+"CMakeFiles/printf1.dir/conv_u.c.o" \
 "CMakeFiles/printf1.dir/conv_perc.c.o" \
 "CMakeFiles/printf1.dir/help.c.o" \
 "CMakeFiles/printf1.dir/ft_strlen.c.o" \
@@ -435,7 +435,7 @@ printf1: CMakeFiles/printf1.dir/conv_d.c.o
 printf1: CMakeFiles/printf1.dir/conv_i.c.o
 printf1: CMakeFiles/printf1.dir/conv_o.c.o
 printf1: CMakeFiles/printf1.dir/conv_x.c.o
-printf1: CMakeFiles/printf1.dir/conv_x32.c.o
+printf1: CMakeFiles/printf1.dir/conv_u.c.o
 printf1: CMakeFiles/printf1.dir/conv_perc.c.o
 printf1: CMakeFiles/printf1.dir/help.c.o
 printf1: CMakeFiles/printf1.dir/ft_strlen.c.o

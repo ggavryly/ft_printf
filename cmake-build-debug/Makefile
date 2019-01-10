@@ -312,6 +312,33 @@ conv_s.c.s:
 	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_s.c.s
 .PHONY : conv_s.c.s
 
+conv_u.o: conv_u.c.o
+
+.PHONY : conv_u.o
+
+# target to build an object file
+conv_u.c.o:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_u.c.o
+.PHONY : conv_u.c.o
+
+conv_u.i: conv_u.c.i
+
+.PHONY : conv_u.i
+
+# target to preprocess a source file
+conv_u.c.i:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_u.c.i
+.PHONY : conv_u.c.i
+
+conv_u.s: conv_u.c.s
+
+.PHONY : conv_u.s
+
+# target to generate assembly for a file
+conv_u.c.s:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_u.c.s
+.PHONY : conv_u.c.s
+
 conv_x.o: conv_x.c.o
 
 .PHONY : conv_x.o
@@ -338,33 +365,6 @@ conv_x.s: conv_x.c.s
 conv_x.c.s:
 	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_x.c.s
 .PHONY : conv_x.c.s
-
-conv_x32.o: conv_x32.c.o
-
-.PHONY : conv_x32.o
-
-# target to build an object file
-conv_x32.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_x32.c.o
-.PHONY : conv_x32.c.o
-
-conv_x32.i: conv_x32.c.i
-
-.PHONY : conv_x32.i
-
-# target to preprocess a source file
-conv_x32.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_x32.c.i
-.PHONY : conv_x32.c.i
-
-conv_x32.s: conv_x32.c.s
-
-.PHONY : conv_x32.s
-
-# target to generate assembly for a file
-conv_x32.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_x32.c.s
-.PHONY : conv_x32.c.s
 
 flags.o: flags.c.o
 
@@ -855,12 +855,12 @@ help:
 	@echo "... conv_s.o"
 	@echo "... conv_s.i"
 	@echo "... conv_s.s"
+	@echo "... conv_u.o"
+	@echo "... conv_u.i"
+	@echo "... conv_u.s"
 	@echo "... conv_x.o"
 	@echo "... conv_x.i"
 	@echo "... conv_x.s"
-	@echo "... conv_x32.o"
-	@echo "... conv_x32.i"
-	@echo "... conv_x32.s"
 	@echo "... flags.o"
 	@echo "... flags.i"
 	@echo "... flags.s"

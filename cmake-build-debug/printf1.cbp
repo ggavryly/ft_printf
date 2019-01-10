@@ -103,10 +103,10 @@
 		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_s.c">
 			<Option target="printf1"/>
 		</Unit>
-		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_x.c">
+		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_u.c">
 			<Option target="printf1"/>
 		</Unit>
-		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_x32.c">
+		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_x.c">
 			<Option target="printf1"/>
 		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/flags.c">

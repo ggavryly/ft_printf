@@ -31,16 +31,17 @@ int    print_conv(char con, t_type c, va_list ap)
 		return (print_d(ap, c));
 	else if (con == 'i')
 		return (print_i(ap, c));
-//    else if (str[str_len - 1] == 'o')
-//        scan_o();
-//    else if (str[str_len - 1] == 'u')
-//        scan_u();
-//    else if (str[str_len - 1] == 'x')
-//        scan_x();
-//    else if (str[str_len - 1] == 'X')
-//        scan_x32();
-//    else if (str[str_len - 1] == 'C')
-//        scan_c32();
+	else if (con == 'o')
+		return (print_o(ap, c));
+	else if (con == 'u')
+		return (print_u(ap, c));
+    else if (con == 'x' || con == 'X')
+	{
+    	if (con == 'x')
+			return (print_x(ap, c));
+    	else if (con == 'X')
+			return (print_x(ap, c));
+	}
 //    else if (str[str_len - 1] == 'f')
 //        scan_f();
 	else if (con == '%')
@@ -57,7 +58,7 @@ int     con_len(const char *str)
 	
 	i = 0;
 	res = 1;
-	s = "cspdiouxX%f";
+	s = "cspdioOuxX%f";
 	s1 = " #.-+0hlL123456789";
 	while (str[i])
 	{
