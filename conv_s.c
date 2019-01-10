@@ -12,56 +12,129 @@
 
 #include "ft_printf.h"
 
-int    print_s(va_list ap, t_type con)
-{
-    int len;
-    char *c;
-
-    c = va_arg(ap, char*);
-    len = ft_strlen(c);
-    if (!c || con.precision == -1)
-		return (print_null(con));
-    print(&con, len);
-    if (con.left_ali && (*c || con.field_width))
-    {
-        if (!con.precision)
-            ft_putstr(c);
-        else if (con.precision)
-            ft_putnstr(c, con.precision);
-        while (--con.field_width >= 0)
-            ft_putchar(' ' + con.zero_pad);
-    }
-    else if (con.right_ali && (*c || con.field_width))
-    {
-        while (--con.field_width >= 0)
-            ft_putchar(' ' + con.zero_pad);
-        if (!con.precision)
-            ft_putstr(c);
-        else if (con.precision)
-            ft_putnstr(c, con.precision);
-    }
-    return (con.print);
-}
-
-int		print_null(t_type con)
+static void	print_null(t_type *con)
 {
 	char *k;
 	int i;
 
 	k = "(null)";
 	i = 0;
-	if (con.precision == -1)
-		return (0);
-	else
+	if (con->precision != -1)
 	{
-		if (con.precision)
+		if (con->precision)
 		{
-			while (k[i] && con.precision--)
+			while (k[i] && con->precision--)
+			{
+				con->print++;
 				ft_putchar(k[i++]);
-			return (i);
+			}
 		}
 		else
+		{
 			ft_putstr("(null)");
+			con->print += 6;
+		}
 	}
-	return (6);
+}
+
+static void	right_field(char *str, t_type *con)
+{
+	int field;
+	int strlen;
+	int print;
+
+	strlen = ft_strlen(str);
+	print = 0;
+	field = con->field_width;
+	if (con->precision > 0)
+	{
+		if (strlen < con->precision)
+			print = strlen;
+		else if (con->precision < strlen)
+			print = con->precision;
+	}
+	else if (con->precision == -1)
+		strlen = 0;
+	else
+		print = strlen;
+	if (field > print)
+	{
+		field -= print;
+		con->print += field;
+		while (field-- > 0)
+			ft_putchar(' ');
+	}
+}
+static void	left_field(t_type *con)
+{
+	int field;
+	int print;
+
+	field = con->field_width;
+	print = con->print;
+	if (field > print)
+	{
+		field -= print;
+		con->print += field;
+		while (field-- > 0)
+			ft_putchar(' ');
+	}
+}
+
+static void	precision(char *str, t_type *con)
+{
+	int strlen;
+	int i;
+
+	strlen = ft_strlen(str);
+	i = 0;
+	if (con->precision > 0)
+	{
+		if (strlen < con->precision)
+		{
+			ft_putstr(str);
+			con->print += strlen;
+		}
+		else if (con->precision < strlen)
+		{
+			while (con->precision-- > 0)
+			{
+				con->print++;
+				ft_putchar(str[i++]);
+			}
+		}
+	}
+	else if (con->precision == 0)
+	{
+		con->print += strlen;
+		ft_putstr(str);
+	}
+}
+
+int    print_s(va_list ap, t_type con)
+{
+    char *c;
+
+    c = va_arg(ap, char*);
+    if (con.left_ali)
+    {
+    	if (!c)
+		{
+    		print_null(&con);
+			return (con.print);
+		}
+		precision(c, &con);
+		left_field(&con);
+    }
+    else if (con.right_ali)
+    {
+		if (!c)
+		{
+			print_null(&con);
+			return (con.print);
+		}
+		right_field(c, &con);
+		precision(c, &con);
+    }
+    return (con.print);
 }
