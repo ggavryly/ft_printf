@@ -61,7 +61,7 @@ void	zero_field(t_type *con, int print, int *flag)
 	field -= print;
 	con->print += field;
 	while (field-- > 0)
-		ft_putchar('0');
+		ft_putchar(' ' + ((con->precision == -1) ? (0) : con->zero_pad));
 
 }
 
@@ -95,7 +95,7 @@ void	zero_case_help(t_type *con, int *flag)
 		print++;
 	if (prec > 0)
 		print += prec;
-	if (field > print && !con->zero_pad)
+	if (field > print && !con->zero_pad && prec != -1)
 	{
 		field -= print;
 		con->print += field;
