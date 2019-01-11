@@ -13,13 +13,41 @@
   <component name="ChangeListManager">
     <list default="true" id="9a6f29e9-de98-4021-a7e8-485a4185fb54" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/help.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/help.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/conv_i.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/conv_i.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/conv_o.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/conv_o.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/conv_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/conv_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/printf1.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/printf1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/printf1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conv_d.c" beforeDir="false" afterPath="$PROJECT_DIR$/conv_d.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libftprintf.a" beforeDir="false" afterPath="$PROJECT_DIR$/libftprintf.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conv_c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conv_d.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conv_i.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conv_i.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conv_o.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conv_p.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conv_perc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conv_s.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conv_u.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conv_x.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flags.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_atoi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_atoi_base.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_printf.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_printf.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_putchar.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_putnbr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_putstr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_strchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_strdup.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_strlen.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/help.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libftprintf.a" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scan_conv.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zero_case.o" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +73,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/conv_d.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="417">
-                  <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+                <state relative-caret-position="307">
+                  <caret line="102" column="15" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -54,17 +82,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/conv_u.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="607">
+                <state relative-caret-position="1008">
                   <caret line="95" column="33" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/conv_i.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="577">
-                  <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -72,8 +91,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/conv_o.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="667">
-                  <caret line="115" selection-start-line="115" selection-end-line="115" />
+                <state relative-caret-position="-729">
+                  <caret line="12" selection-start-line="12" selection-end-line="25" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -90,8 +109,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/conv_x.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="267">
-                  <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+                <state relative-caret-position="229">
+                  <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
                 </state>
               </provider>
             </entry>
@@ -108,7 +127,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ft_itoa_base.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="367">
+                <state relative-caret-position="292">
                   <caret line="58" selection-start-line="58" selection-end-line="58" />
                 </state>
               </provider>
@@ -127,11 +146,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ft_printf.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="452">
-                  <caret line="34" selection-start-line="34" selection-end-line="34" />
+                <state relative-caret-position="317">
+                  <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -154,11 +173,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="90">
-                  <caret line="8" column="77" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
+                  <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
                 </state>
               </provider>
             </entry>
@@ -175,8 +194,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ft_printf.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+                <state relative-caret-position="285">
+                  <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
                   <folding>
                     <element signature="e#934#953#0" expanded="true" />
                   </folding>
@@ -260,29 +279,29 @@
         <option value="$PROJECT_DIR$/putshort.c" />
         <option value="$PROJECT_DIR$/ft_putnbr.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/ft_printf.c" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/conv_s.c" />
         <option value="$PROJECT_DIR$/ft_itoa_base.c" />
         <option value="$PROJECT_DIR$/conv_p.c" />
         <option value="$PROJECT_DIR$/conv_c.c" />
         <option value="$PROJECT_DIR$/ft_atoi.c" />
-        <option value="$PROJECT_DIR$/ft_printf.h" />
         <option value="$PROJECT_DIR$/ft_itoa.c" />
         <option value="$PROJECT_DIR$/zero_case.c" />
-        <option value="$PROJECT_DIR$/conv_i.c" />
         <option value="$PROJECT_DIR$/conv_u.c" />
-        <option value="$PROJECT_DIR$/conv_o.c" />
-        <option value="$PROJECT_DIR$/conv_x.c" />
         <option value="$PROJECT_DIR$/scan_conv.c" />
         <option value="$PROJECT_DIR$/help.c" />
+        <option value="$PROJECT_DIR$/conv_i.c" />
+        <option value="$PROJECT_DIR$/conv_x.c" />
         <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/ft_printf.h" />
+        <option value="$PROJECT_DIR$/conv_o.c" />
         <option value="$PROJECT_DIR$/conv_d.c" />
+        <option value="$PROJECT_DIR$/ft_printf.c" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="762" />
+    <option name="x" value="520" />
     <option name="y" value="23" />
     <option name="width" value="1728" />
     <option name="height" value="1337" />
@@ -400,7 +419,7 @@
       <workItem from="1547122002653" duration="6525000" />
       <workItem from="1547132916491" duration="2921000" />
       <workItem from="1547197025978" duration="13943000" />
-      <workItem from="1547216629751" duration="9314000" />
+      <workItem from="1547216629751" duration="10466000" />
     </task>
     <task id="LOCAL-00001" summary="R0B-Ta">
       <created>1546863715173</created>
@@ -420,7 +439,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153646000" />
+    <option name="totallyTimeSpent" value="154798000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -432,22 +451,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="23" width="1728" height="1337" extended-state="0" />
+    <frame x="520" y="23" width="1728" height="1337" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.087781735" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.087781735" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32931727" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49940687" visible="true" weight="0.32931727" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49940687" weight="0.32931727" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.26907632" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32931727" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32931727" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32931727" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005931" side_tool="true" weight="0.32931727" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32931727" />
@@ -616,16 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ft_printf.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
-          <folding>
-            <element signature="e#934#953#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conv_s.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1830">
@@ -654,38 +663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conv_i.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conv_u.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="95" column="33" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ft_putstr.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conv_x.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ft_itoa_base.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
@@ -696,24 +677,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ft_printf.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ft_atoi.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conv_o.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
         </state>
       </provider>
     </entry>
@@ -731,20 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scan_conv.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="77" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/help.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -752,10 +705,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/conv_u.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="95" column="33" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conv_i.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conv_x.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_itoa_base.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_printf.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="e#934#953#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conv_o.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729">
+          <caret line="12" selection-start-line="12" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/conv_d.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+        <state relative-caret-position="307">
+          <caret line="102" column="15" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scan_conv.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_printf.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
         </state>
       </provider>
     </entry>

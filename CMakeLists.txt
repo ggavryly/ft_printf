@@ -12,7 +12,6 @@ add_executable(printf1
         ../../Desktop/printf0/conv_s.c
         ../../Desktop/printf0/conv_p.c
         ../../Desktop/printf0/conv_d.c
-        ../../Desktop/printf0/conv_i.c
         ../../Desktop/printf0/conv_o.c
         ../../Desktop/printf0/conv_x.c
 		../../Desktop/printf0/conv_u.c
@@ -32,4 +31,4 @@ add_executable(printf1
         ../../Desktop/printf0/ft_atoi_base.c
 		../../Desktop/printf0/ft_strcmp.c
 		../../Desktop/printf0/scan_conv.c
-		../../Desktop/printf0/zero_case.c)
+		)
