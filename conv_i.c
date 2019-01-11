@@ -81,12 +81,12 @@ static void	field(t_type *con, int strlen, char *str, intmax_t *k)
 	prec = con->precision;
 	print = (str[0] == '0' && prec == -1) ? 0 : strlen;
 	field = con->field_width;
-	if (con->sign || *k < 0 || con->space)
-		print += 1;
 	if (prec > strlen)
 		print += prec - strlen;
 	else
 		print += (prec == -1) ? 0 : prec;
+	if (con->sign || *k < 0 || con->space)
+		print += 1;
 	field -= print;
 	if (con->zero_pad && !con->left_ali)
 		zero_pad(field, con, k);
