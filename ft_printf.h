@@ -30,7 +30,7 @@ typedef struct  s_conv
 	unsigned int         right_ali : 1;
 	unsigned int         sign : 1;
 	unsigned int         space : 1;
-	unsigned int         zero_pad : 5;
+	unsigned int         zero_pad : 1;
 	unsigned int         h : 1;
 	unsigned int         hh : 1;
 	unsigned int         l : 1;
@@ -43,7 +43,7 @@ int     ft_printf(const char *format, ...);
 
 void 	ft_putchar(char c);
 int		ft_atoi(const char *str);
-char	*ft_itoa(int n);
+char	*ft_itoa(intmax_t value, char sig);
 void	ft_putnbr(intmax_t k, int sign);
 void	ft_putstr(char const *s);
 char	*ft_strchr(const char *s, int c);

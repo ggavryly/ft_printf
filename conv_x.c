@@ -12,92 +12,111 @@
 
 #include "ft_printf.h"
 
-static int hash(t_type *con, intmax_t k)
+static int hash(t_type *con, uintmax_t *k)
 {
-	if (con->alt_form && k != 0)
+	if (con->alt_form && *k != 0)
 	{
 		if (con->conversion == 'x')
-			ft_putstr("0x");
+			write(1, "0x", 2);
 		else if (con->conversion == 'X')
-			ft_putstr("0X");
+			write(1, "0X", 2);
+		con->print += 2;
+		*k = 0;
 	}
 	return (1);
 }
 
-static int	precision(char *str, t_type con)
+static void	zero_pad(int field, t_type *con, uintmax_t *k)
 {
-	int slen;
-	int print;
-
-	slen = ft_strlen(str);
-	print = (str[0] == '-') ? slen - 1 : slen;
-	if (print < con.precision)
+	if (con->alt_form)
+		hash(con, k);
+	if (field >= 0 && !con->precision)
 	{
-		con.precision -= print;
-		while (con.precision--)
-			ft_putchar('0');
+		con->print += field;
+		while (field-- > 0)
+			write(1, "0", 1);
 	}
+	else if (field >= 0)
+	{
+		con->print += field;
+		while (field-- > 0)
+			write(1, " ", 1);
+	}
+
+}
+
+static int	precision(uintmax_t k, t_type *con, int strlen)
+{
+	int print;
+	int prec;
+
+	print = strlen;
+	prec = con->precision;
+	if (print <= prec)
+	{
+		prec -= print;
+		con->print += prec + strlen;
+		while (prec-- > 0)
+			write(1, "0", 1);
+	}
+	else if  (prec == -1 && k == 0)
+		return (-1);
+	else if (prec == 0 || prec < print)
+		con->print += print;
 	return (1);
 }
 
-static int	field(t_type *con, char *str, intmax_t k)
+static void	field(t_type *con, int strlen, char *str, uintmax_t *k)
 {
-	int slen;
 	int prec;
+	int field;
 	int print;
-	int flag;
 
-	slen = ft_strlen(str);
-	prec = 0;
-	flag = 0;
-	print = (str[0] == '-') ? slen - 1 : slen;
-	if (print < con->precision)
-		prec = con->precision - print;
-	if (con->alt_form && str[0] != '0')
-		prec += 2;
-	if (con->alt_form && con->zero_pad)
-		flag = hash(con, k);
-	prec += print;
-	con->field_width -= prec;
-	if (con->field_width >= 0)
-		prec += con->field_width;
-	con->print = prec;
-	while (con->field_width-- > 0)
-		ft_putchar(' ' + ((con->precision) ? (0) : con->zero_pad));
-	return (flag);
+	prec = con->precision;
+	print = (str[0] == '0' && prec == -1) ? 0 : strlen;
+	field = con->field_width;
+	if (con->alt_form)
+		print += 2;
+	if (prec > strlen)
+		print += prec - strlen;
+	else if (prec < strlen && prec > 0)
+		print = strlen;
+	else
+		print += (prec == -1) ? 0 : prec;
+	field -= print;
+	if (con->zero_pad && !con->left_ali)
+		zero_pad(field, con, k);
+	else if (field >= 0)
+	{
+		con->print += field;
+		while (field-- > 0)
+			write(1, " ", 1);
+	}
 }
 
 int 	print_x(va_list ap, t_type con)
 {
 	uintmax_t k;
+	int strlen;
 	char *str;
 
 	k = flag_intoux(con, ap);
-	str = itoa_base_u(k, 16, (char)((con.conversion == 'x') ? 'a' : 'A'));
+	str = itoa_base(k, 16, ((con.conversion == 'x') ? 'a' : 'A'));
+	strlen = ft_strlen(str);
 	if (con.left_ali)
 	{
-		if (k == 0)
-		{
-			zero_case_left(&con, str);
-			return (con.print);
-		}
 		con.zero_pad = 0;
-		hash(&con, k);
-		precision(str, con);
-		ft_putstr(str);
-		field(&con, str, k);
+		hash(&con, &k);
+		if (precision(k, &con, strlen) != -1)
+			ft_putstr(str);
+		field(&con, strlen, str, &k);
 	}
 	else if (con.right_ali)
 	{
-		if (k == 0)
-		{
-			zero_case_right(&con, str);
-			return (con.print);
-		}
-		if (!field(&con, str, k))
-			hash(&con, k);
-		precision(str, con);
-		ft_putstr(str);
+		field(&con, strlen, str, &k);
+		hash(&con, &k);
+		if (precision(k, &con, strlen) != -1)
+			ft_putstr(str);
 	}
 	free(str);
 	return (con.print);

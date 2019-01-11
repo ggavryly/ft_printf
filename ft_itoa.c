@@ -12,56 +12,48 @@
 
 #include "ft_printf.h"
 
-static void		ft_isneg(int *n, int *neg)
+static uintmax_t	swap_sign(intmax_t value, int *sign, char sig)
 {
-	if (*n < 0)
+	uintmax_t res;
+
+	if (value < 0)
 	{
-		*n *= -1;
-		*neg = 1;
+		if (sig == '1')
+			*sign = 1;
+		res = -value;
 	}
+	else
+		res = value;
+	return (res);
 }
 
-static char		*ft_limit(int n)
-{
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	else if (n == 2147483647)
-		return (ft_strdup("2147483647"));
-	return (NULL);
-}
-
-static char		*ft_zapis(char *num, size_t nul, int n, int neg)
-{
-	num[nul] = '\0';
-	while (nul--)
-	{
-		num[nul] = n % 10 + '0';
-		n /= 10;
-	}
-	if (neg)
-		num[0] = '-';
-	return (num);
-}
-
-char			*ft_itoa(int n)
+char	*ft_itoa(intmax_t value, char sig)
 {
 	int			i;
-	int			len;
-	int			neg;
-	char		*t;
+	char		*str;
+	uintmax_t	tmp;
+	int             sign;
 
-	if (n == -2147483648 || n == 2147483647)
-		return (ft_limit(n));
-	i = n;
-	len = 1;
-	neg = 0;
-	ft_isneg(&n, &neg);
-	while (i /= 10)
-		len++;
-	if ((t = (char *)malloc(sizeof(char) * (len + neg) + 1)) != NULL)
+	i = 0;
+	sign = 0;
+	tmp = swap_sign(value, &sign, sig);
+	while (tmp >= 10)
 	{
-		ft_zapis(t, len + neg, n, neg);
-		return (t);
+		tmp /= 10;
+		i++;
 	}
-	return (NULL);
+	tmp = (value < 0) ? (-value) : value;
+	if (!(str = (char *)malloc(sizeof(char) * (i + 1 + sign))))
+		return (NULL);
+	str[i + 1 + sign] = '\0';
+	if (sign)
+		str[0] = '-';
+	while (i >= 0)
+	{
+		value = tmp % 10;
+		str[i + sign] = value + '0';
+		tmp /= 10;
+		i--;
+	}
+	return (str);
 }

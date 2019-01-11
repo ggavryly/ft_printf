@@ -22,8 +22,13 @@ int    scan_all(t_type *con, const char *str, int str_len, char conv)
 	con->conversion = conv;
 	while (i < str_len - 1 && str[i])
 	{
-		if (str[i] == '0')
-			con->zero_pad = 16;
+		if (str[i] == '.')
+		{
+			con->precision = scan_precision(str, &i);
+			continue;
+		}
+		else if (str[i] == '0')
+			con->zero_pad = 1;
 		else if (str[i] == '+')
 			con->sign = 1;
 		else if (str[i] == ' ')
@@ -33,11 +38,6 @@ int    scan_all(t_type *con, const char *str, int str_len, char conv)
 		else if (str[i] >= '1' && str[i] <= '9')
 		{
 			con->field_width = scan_field(str, &i);
-			continue;
-		}
-		else if (str[i] == '.')
-		{
-			con->precision = scan_precision(str, &i);
 			continue;
 		}
 		else if (str[i] == 'h' || str[i] == 'l' || str[i] == 'L')
@@ -63,6 +63,8 @@ int     scan_precision(const char *str, int *iter)
 	res = ft_atoi(str + i);
 	if (!res)
 	{
+		while (str[i] >= '0' && str[i] <= '9')
+			i++;
 		*iter = i;
 		return (-1);
 	}
