@@ -12,22 +12,16 @@
 
 #include "ft_printf.h"
 
-int    scan_all(t_type *con, const char *str, int str_len, char conv)
+void    scan_flags(const char *str, int *iter, t_type *con)
 {
 	int i;
 	
-	i = 0;
-	initialize_type(con);
+	i = *iter;
 	con->right_ali = 1;
-	con->conversion = conv;
-	while (i < str_len - 1 && str[i])
+	while (str[i] == '0' || str[i] == '+'
+	|| str[i] == '-' || str[i] == '#' || str[i] == ' ')
 	{
-		if (str[i] == '.')
-		{
-			con->precision = scan_precision(str, &i);
-			continue;
-		}
-		else if (str[i] == '0')
+		if (str[i] == '0')
 			con->zero_pad = 1;
 		else if (str[i] == '+')
 			con->sign = 1;
@@ -35,13 +29,6 @@ int    scan_all(t_type *con, const char *str, int str_len, char conv)
 			con->space = 1;
 		else if (str[i] == '#')
 			con->alt_form = 1;
-		else if (str[i] >= '1' && str[i] <= '9')
-		{
-			con->field_width = scan_field(str, &i);
-			continue;
-		}
-		else if (str[i] == 'h' || str[i] == 'l' || str[i] == 'L')
-			scan_flag(str, &i, con);
 		else if (str[i] == '-')
 		{
 			con->left_ali = 1;
@@ -49,32 +36,30 @@ int    scan_all(t_type *con, const char *str, int str_len, char conv)
 		}
 		i++;
 	}
-	if (str_len > 1)
-		return (con->conversion);
-	return (-1);
+	*iter = i;
 }
 
-int     scan_precision(const char *str, int *iter)
+void     scan_precision(const char *str, int *iter, t_type *con)
 {
 	int res;
 	int i;
-	
-	i = *iter + 1;
-	res = ft_atoi(str + i);
-	if (!res)
+
+	i = *iter;
+	if (str[i] == '.')
 	{
+		i++;
+		res = ft_atoi(str + i);
+		if (!res)
+			con->precision = -1;
+		else
+			con->precision = res;
 		while (str[i] >= '0' && str[i] <= '9')
 			i++;
 		*iter = i;
-		return (-1);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-		i++;
-	*iter = i;
-	return (res);
 }
 
-int     scan_field(const char *str, int *iter)
+void     scan_field(const char *str, int *iter, t_type *con)
 {
 	int res;
 	int i;
@@ -84,10 +69,10 @@ int     scan_field(const char *str, int *iter)
 	while (str[i] >= '0' && str[i] <= '9')
 		i++;
 	*iter = i;
-	return (res);
+	con->field_width = res;
 }
 
-void    scan_flag(const char *str, int *iter, t_type *con)
+void    scan_change(const char *str, int *iter, t_type *con)
 {
 	int i;
 	
@@ -102,7 +87,12 @@ void    scan_flag(const char *str, int *iter, t_type *con)
 		con->l = 1;
 	else if (str[i] == 'L')
 		con->l32 = 1;
-	while (str[i] == 'h' || str[i] == 'l')
+	else if (str[i] == 'j')
+		con->j = 1;
+	else if (str[i] == 'z')
+		con->z = 1;
+	while (str[i] == 'h' || str[i] == 'l'
+	|| str[i] == 'j' || str[i] == 'z')
 		i++;
 	*iter = i;
 }

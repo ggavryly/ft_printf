@@ -18,7 +18,6 @@ static void	field(t_type *con, char *str)
 	int field;
 
 	print = ft_strlen(str) + 2;
-	con->print = print;
 	field = con->field_width;
 	if (field > print)
 	{
@@ -29,25 +28,22 @@ static void	field(t_type *con, char *str)
 	}
 }
 
-int    print_p(va_list ap, t_type con)
+int    print_p(t_type *con)
 {
 	uintmax_t k;
 	char *str;
 	
-	k = (uintmax_t)va_arg(ap, void *);
+	k = (uintmax_t)va_arg(con->ap, void *);
 	str = itoa_base_u(k, 16, 'a');
-	if (con.left_ali)
-	{
-		ft_putstr("0x");
-		ft_putstr(str);
-		field(&con, str);
-	}
-	else if (con.right_ali)
-	{
-		field(&con, str);
-		ft_putstr("0x");
-		ft_putstr(str);
-	}
+	if (con->right_ali)
+		if (con->field_width)
+			field(con, str);
+	ft_putstr("0x");
+	ft_putstr(str);
+	if (con->left_ali)
+		if (con->field_width)
+			field(con, str);
+	con->print += ft_strlen(str) + 2;
 	free(str);
-	return (con.print);
+	return (con->print);
 }

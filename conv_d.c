@@ -100,30 +100,30 @@ static void	field(t_type *con, int strlen, char *str, intmax_t *k)
 	}
 }
 
-int 	print_d(va_list ap, t_type con)
+int 	print_d(t_type *con)
 {
 	intmax_t k;
 	int strlen;
 	char *str;
 
-	k = flag_intdi(con, ap);
+	k = flag_intdi(con);
 	str = ft_itoa(k, '0');
 	strlen = ft_strlen(str);
-	if (con.left_ali)
+	if (con->right_ali)
 	{
-		con.zero_pad = 0;
-		sign(&k, &con);
-		if (precision(k, &con, strlen) != -1)
-			ft_putstr(str);
-		field(&con, strlen, str, &k);
+		if (con->field_width)
+			field(con, strlen, str, &k);
 	}
-	else if (con.right_ali)
-	{
-		field(&con, strlen, str, &k);
-		sign(&k, &con);
-		if (precision(k, &con, strlen) != -1)
+	else
+		con->zero_pad = 0;
+	if (con->sign || k < 0 || con->space)
+		sign(&k, con);
+	if (con->precision || strlen)
+		if (precision(k, con, strlen) != -1)
 			ft_putstr(str);
-	}
+	if (con->left_ali)
+		if (con->field_width)
+			field(con, strlen, str, &k);
 	free(str);
-	return (con.print);
+	return (con->print);
 }

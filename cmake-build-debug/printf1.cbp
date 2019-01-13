@@ -88,16 +88,10 @@
 		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_d.c">
 			<Option target="printf1"/>
 		</Unit>
-		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_i.c">
-			<Option target="printf1"/>
-		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_o.c">
 			<Option target="printf1"/>
 		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_p.c">
-			<Option target="printf1"/>
-		</Unit>
-		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_perc.c">
 			<Option target="printf1"/>
 		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_s.c">
@@ -142,12 +136,6 @@
 		<Unit filename="/Users/ggavryly/Desktop/printf0/ft_strchr.c">
 			<Option target="printf1"/>
 		</Unit>
-		<Unit filename="/Users/ggavryly/Desktop/printf0/ft_strcmp.c">
-			<Option target="printf1"/>
-		</Unit>
-		<Unit filename="/Users/ggavryly/Desktop/printf0/ft_strdup.c">
-			<Option target="printf1"/>
-		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/ft_strlen.c">
 			<Option target="printf1"/>
 		</Unit>
@@ -158,9 +146,6 @@
 			<Option target="printf1"/>
 		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/scan_conv.c">
-			<Option target="printf1"/>
-		</Unit>
-		<Unit filename="/Users/ggavryly/Desktop/printf0/zero_case.c">
 			<Option target="printf1"/>
 		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/CMakeLists.txt">

@@ -14,32 +14,43 @@
 
 int    scan_conv(const char *str, t_type *con, int str_len)
 {
-	if (str[str_len - 1])
-		return (scan_all(con, str, str_len, str[str_len - 1]));
+	int i;
+
+	i = 1;
+	con->conversion = '\0';
+	if (str[str_len])
+	{
+		initialize_type(con, str[str_len]);
+		if (!ft_strchr("cspdioOuxX%f", con->conversion))
+		{
+			con->conversion = '\0';
+			return (-1);
+		}
+		scan_flags(str, &i, con);
+		scan_field(str, &i, con);
+		scan_precision(str, &i, con);
+		scan_change(str, &i, con);
+		return (con->conversion);
+	}
 	return (0);
 }
 
-int    print_conv(char con, t_type c, va_list ap)
+int    print_conv(char con, t_type *c)
 {
 	if (con == 'c')
-		return (print_c(ap, c));
+		return (print_c(c));
 	else if (con == 's')
-		return (print_s(ap, c));
+		return (print_s(c));
     else if (con == 'p')
-		return (print_p(ap, c));
+		return (print_p(c));
     else if (con == 'd' || con == 'i')
-		return (print_d(ap, c));
+		return (print_d(c));
 	else if (con == 'o')
-		return (print_o(ap, c));
+		return (print_o(c));
 	else if (con == 'u')
-		return (print_u(ap, c));
+		return (print_u(c));
     else if (con == 'x' || con == 'X')
-	{
-    	if (con == 'x')
-			return (print_x(ap, c));
-    	else if (con == 'X')
-			return (print_x(ap, c));
-	}
+    	return (print_x(c));
 //    else if (str[str_len - 1] == 'f')
 //        scan_f();
 	else if (con == '%')
@@ -52,41 +63,40 @@ int     con_len(const char *str)
 	int i;
 	int res;
 	char *s;
-	char *s1;
-	
+
 	i = 0;
 	res = 1;
-	s = "cspdioOuxX%f";
-	s1 = " #.-+0hlL123456789";
+	s = " #.-+0hlLjz123456789";
 	while (str[i])
 	{
-		if (ft_strchr(s1, str[i]))
+		if (ft_strchr(s, str[i]))
+		{
 			res++;
-		else if (ft_strchr(s, str[i]))
-			return (res + 1);
+			i++;
+		}
 		else
 			return (res);
-		i++;
 	}
 	return (res);
 }
 
 int ft_printf(const char *format, ...)
 {
-	va_list ap;
+	int conv_len;
 	t_type con;
 	int i;
 	int print;
 	
 	i = 0;
 	print = 0;
-	va_start(ap, format);
+	va_start(con.ap, format);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			print += print_conv(scan_conv(format + i, &con, con_len(format + i + 1)), con, ap);
-			i += con_len(format + i + 1);
+			conv_len = con_len(format + i + 1);
+			print += print_conv(scan_conv(format + i, &con, conv_len), &con);
+			i += conv_len + ((con.conversion) ? (1) : (0));
 		}
 		else
 		{
@@ -94,6 +104,6 @@ int ft_printf(const char *format, ...)
 			ft_putchar(format[i++]);
 		}
 	}
-	va_end (ap);
+	va_end (con.ap);
 	return (print);
 }

@@ -6,10 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/ggavryly/Desktop/printf0/conv_c.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/conv_c.c.o"
   "/Users/ggavryly/Desktop/printf0/conv_d.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/conv_d.c.o"
-  "/Users/ggavryly/Desktop/printf0/conv_i.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/conv_i.c.o"
   "/Users/ggavryly/Desktop/printf0/conv_o.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/conv_o.c.o"
   "/Users/ggavryly/Desktop/printf0/conv_p.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/conv_p.c.o"
-  "/Users/ggavryly/Desktop/printf0/conv_perc.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/conv_perc.c.o"
   "/Users/ggavryly/Desktop/printf0/conv_s.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/conv_s.c.o"
   "/Users/ggavryly/Desktop/printf0/conv_u.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/conv_u.c.o"
   "/Users/ggavryly/Desktop/printf0/conv_x.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/conv_x.c.o"
@@ -23,13 +21,10 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ggavryly/Desktop/printf0/ft_putnbr.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_putnbr.c.o"
   "/Users/ggavryly/Desktop/printf0/ft_putstr.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_putstr.c.o"
   "/Users/ggavryly/Desktop/printf0/ft_strchr.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_strchr.c.o"
-  "/Users/ggavryly/Desktop/printf0/ft_strcmp.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_strcmp.c.o"
-  "/Users/ggavryly/Desktop/printf0/ft_strdup.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_strdup.c.o"
   "/Users/ggavryly/Desktop/printf0/ft_strlen.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_strlen.c.o"
   "/Users/ggavryly/Desktop/printf0/help.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/help.c.o"
   "/Users/ggavryly/Desktop/printf0/main.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/main.c.o"
   "/Users/ggavryly/Desktop/printf0/scan_conv.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/scan_conv.c.o"
-  "/Users/ggavryly/Desktop/printf0/zero_case.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/zero_case.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

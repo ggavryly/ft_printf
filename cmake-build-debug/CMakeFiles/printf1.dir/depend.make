@@ -7,17 +7,11 @@ CMakeFiles/printf1.dir/conv_c.c.o: ../ft_printf.h
 CMakeFiles/printf1.dir/conv_d.c.o: ../conv_d.c
 CMakeFiles/printf1.dir/conv_d.c.o: ../ft_printf.h
 
-CMakeFiles/printf1.dir/conv_i.c.o: ../conv_i.c
-CMakeFiles/printf1.dir/conv_i.c.o: ../ft_printf.h
-
 CMakeFiles/printf1.dir/conv_o.c.o: ../conv_o.c
 CMakeFiles/printf1.dir/conv_o.c.o: ../ft_printf.h
 
 CMakeFiles/printf1.dir/conv_p.c.o: ../conv_p.c
 CMakeFiles/printf1.dir/conv_p.c.o: ../ft_printf.h
-
-CMakeFiles/printf1.dir/conv_perc.c.o: ../conv_perc.c
-CMakeFiles/printf1.dir/conv_perc.c.o: ../ft_printf.h
 
 CMakeFiles/printf1.dir/conv_s.c.o: ../conv_s.c
 CMakeFiles/printf1.dir/conv_s.c.o: ../ft_printf.h
@@ -58,12 +52,6 @@ CMakeFiles/printf1.dir/ft_putstr.c.o: ../ft_putstr.c
 CMakeFiles/printf1.dir/ft_strchr.c.o: ../ft_printf.h
 CMakeFiles/printf1.dir/ft_strchr.c.o: ../ft_strchr.c
 
-CMakeFiles/printf1.dir/ft_strcmp.c.o: ../ft_printf.h
-CMakeFiles/printf1.dir/ft_strcmp.c.o: ../ft_strcmp.c
-
-CMakeFiles/printf1.dir/ft_strdup.c.o: ../ft_printf.h
-CMakeFiles/printf1.dir/ft_strdup.c.o: ../ft_strdup.c
-
 CMakeFiles/printf1.dir/ft_strlen.c.o: ../ft_printf.h
 CMakeFiles/printf1.dir/ft_strlen.c.o: ../ft_strlen.c
 
@@ -75,7 +63,4 @@ CMakeFiles/printf1.dir/main.c.o: ../main.c
 
 CMakeFiles/printf1.dir/scan_conv.c.o: ../ft_printf.h
 CMakeFiles/printf1.dir/scan_conv.c.o: ../scan_conv.c
-
-CMakeFiles/printf1.dir/zero_case.c.o: ../ft_printf.h
-CMakeFiles/printf1.dir/zero_case.c.o: ../zero_case.c
 

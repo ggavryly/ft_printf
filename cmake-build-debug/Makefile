@@ -177,33 +177,6 @@ conv_d.c.s:
 	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_d.c.s
 .PHONY : conv_d.c.s
 
-conv_i.o: conv_i.c.o
-
-.PHONY : conv_i.o
-
-# target to build an object file
-conv_i.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_i.c.o
-.PHONY : conv_i.c.o
-
-conv_i.i: conv_i.c.i
-
-.PHONY : conv_i.i
-
-# target to preprocess a source file
-conv_i.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_i.c.i
-.PHONY : conv_i.c.i
-
-conv_i.s: conv_i.c.s
-
-.PHONY : conv_i.s
-
-# target to generate assembly for a file
-conv_i.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_i.c.s
-.PHONY : conv_i.c.s
-
 conv_o.o: conv_o.c.o
 
 .PHONY : conv_o.o
@@ -257,33 +230,6 @@ conv_p.s: conv_p.c.s
 conv_p.c.s:
 	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_p.c.s
 .PHONY : conv_p.c.s
-
-conv_perc.o: conv_perc.c.o
-
-.PHONY : conv_perc.o
-
-# target to build an object file
-conv_perc.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_perc.c.o
-.PHONY : conv_perc.c.o
-
-conv_perc.i: conv_perc.c.i
-
-.PHONY : conv_perc.i
-
-# target to preprocess a source file
-conv_perc.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_perc.c.i
-.PHONY : conv_perc.c.i
-
-conv_perc.s: conv_perc.c.s
-
-.PHONY : conv_perc.s
-
-# target to generate assembly for a file
-conv_perc.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_perc.c.s
-.PHONY : conv_perc.c.s
 
 conv_s.o: conv_s.c.o
 
@@ -636,60 +582,6 @@ ft_strchr.c.s:
 	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strchr.c.s
 .PHONY : ft_strchr.c.s
 
-ft_strcmp.o: ft_strcmp.c.o
-
-.PHONY : ft_strcmp.o
-
-# target to build an object file
-ft_strcmp.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strcmp.c.o
-.PHONY : ft_strcmp.c.o
-
-ft_strcmp.i: ft_strcmp.c.i
-
-.PHONY : ft_strcmp.i
-
-# target to preprocess a source file
-ft_strcmp.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strcmp.c.i
-.PHONY : ft_strcmp.c.i
-
-ft_strcmp.s: ft_strcmp.c.s
-
-.PHONY : ft_strcmp.s
-
-# target to generate assembly for a file
-ft_strcmp.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strcmp.c.s
-.PHONY : ft_strcmp.c.s
-
-ft_strdup.o: ft_strdup.c.o
-
-.PHONY : ft_strdup.o
-
-# target to build an object file
-ft_strdup.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strdup.c.o
-.PHONY : ft_strdup.c.o
-
-ft_strdup.i: ft_strdup.c.i
-
-.PHONY : ft_strdup.i
-
-# target to preprocess a source file
-ft_strdup.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strdup.c.i
-.PHONY : ft_strdup.c.i
-
-ft_strdup.s: ft_strdup.c.s
-
-.PHONY : ft_strdup.s
-
-# target to generate assembly for a file
-ft_strdup.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strdup.c.s
-.PHONY : ft_strdup.c.s
-
 ft_strlen.o: ft_strlen.c.o
 
 .PHONY : ft_strlen.o
@@ -798,33 +690,6 @@ scan_conv.c.s:
 	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/scan_conv.c.s
 .PHONY : scan_conv.c.s
 
-zero_case.o: zero_case.c.o
-
-.PHONY : zero_case.o
-
-# target to build an object file
-zero_case.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/zero_case.c.o
-.PHONY : zero_case.c.o
-
-zero_case.i: zero_case.c.i
-
-.PHONY : zero_case.i
-
-# target to preprocess a source file
-zero_case.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/zero_case.c.i
-.PHONY : zero_case.c.i
-
-zero_case.s: zero_case.c.s
-
-.PHONY : zero_case.s
-
-# target to generate assembly for a file
-zero_case.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/zero_case.c.s
-.PHONY : zero_case.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -840,18 +705,12 @@ help:
 	@echo "... conv_d.o"
 	@echo "... conv_d.i"
 	@echo "... conv_d.s"
-	@echo "... conv_i.o"
-	@echo "... conv_i.i"
-	@echo "... conv_i.s"
 	@echo "... conv_o.o"
 	@echo "... conv_o.i"
 	@echo "... conv_o.s"
 	@echo "... conv_p.o"
 	@echo "... conv_p.i"
 	@echo "... conv_p.s"
-	@echo "... conv_perc.o"
-	@echo "... conv_perc.i"
-	@echo "... conv_perc.s"
 	@echo "... conv_s.o"
 	@echo "... conv_s.i"
 	@echo "... conv_s.s"
@@ -891,12 +750,6 @@ help:
 	@echo "... ft_strchr.o"
 	@echo "... ft_strchr.i"
 	@echo "... ft_strchr.s"
-	@echo "... ft_strcmp.o"
-	@echo "... ft_strcmp.i"
-	@echo "... ft_strcmp.s"
-	@echo "... ft_strdup.o"
-	@echo "... ft_strdup.i"
-	@echo "... ft_strdup.s"
 	@echo "... ft_strlen.o"
 	@echo "... ft_strlen.i"
 	@echo "... ft_strlen.s"
@@ -909,9 +762,6 @@ help:
 	@echo "... scan_conv.o"
 	@echo "... scan_conv.i"
 	@echo "... scan_conv.s"
-	@echo "... zero_case.o"
-	@echo "... zero_case.i"
-	@echo "... zero_case.s"
 .PHONY : help
 
 

@@ -12,6 +12,20 @@
 
 #include "ft_printf.h"
 
+static void field_put(t_type *con, int field, int print)
+{
+	field -= print;
+	con->print += field;
+	if (con->zero_pad && !con->left_ali)
+	{
+		while (field-- > 0)
+			write(1, "0", 1);
+	}
+	else
+		while (field-- > 0)
+			write(1," ", 1);
+}
+
 static void	print_null(t_type *con)
 {
 	char *k;
@@ -37,7 +51,7 @@ static void	print_null(t_type *con)
 	}
 }
 
-static void	right_field(char *str, t_type *con)
+static void	field(char *str, t_type *con)
 {
 	int field;
 	int strlen;
@@ -59,82 +73,64 @@ static void	right_field(char *str, t_type *con)
 		print = strlen;
 	if (field > print)
 	{
-		field -= print;
-		con->print += field;
-		while (field-- > 0)
-			ft_putchar(' ');
-	}
-}
-static void	left_field(t_type *con)
-{
-	int field;
-	int print;
-
-	field = con->field_width;
-	print = con->print;
-	if (field > print)
-	{
-		field -= print;
-		con->print += field;
-		while (field-- > 0)
-			ft_putchar(' ');
+		if (con->zero_pad && !con->left_ali)
+			field_put(con, field, print);
+		else
+			field_put(con, field, print);
 	}
 }
 
-static void	precision(char *str, t_type *con)
+static void	precision(char *str, t_type *con, int strlen)
 {
-	int strlen;
+	int prec;
 	int i;
 
-	strlen = ft_strlen(str);
+	prec = con->precision;
 	i = 0;
-	if (con->precision > 0)
+	if (prec > 0)
 	{
-		if (strlen < con->precision)
+		if (strlen < prec)
 		{
 			ft_putstr(str);
 			con->print += strlen;
 		}
-		else if (con->precision < strlen)
+		else if (prec < strlen)
 		{
-			while (con->precision-- > 0)
+			while (prec-- > 0)
 			{
 				con->print++;
 				ft_putchar(str[i++]);
 			}
 		}
 	}
-	else if (con->precision == 0)
+	else if (prec == 0)
 	{
 		con->print += strlen;
 		ft_putstr(str);
 	}
 }
 
-int    print_s(va_list ap, t_type con)
+int    print_s(t_type *con)
 {
     char *c;
+    int strlen;
 
-    c = va_arg(ap, char*);
-    if (con.left_ali)
+    c = va_arg(con->ap, char*);
+    strlen = ft_strlen(c);
+    if (!c)
     {
-    	if (!c)
-		{
-    		print_null(&con);
-			return (con.print);
-		}
-		precision(c, &con);
-		left_field(&con);
+    	print_null(con);
+    	return (con->print);
     }
-    else if (con.right_ali)
-    {
-		if (!c)
-		{
-			print_null(&con);
-			return (con.print);
-		}
-		right_field(c, &con);
-		precision(c, &con);
-    }
-    return (con.print);
+    if (con->left_ali)
+    	precision(c, con, strlen);
+    if (con->left_ali)
+    	if (con->field_width)
+    		field(c, con);
+    if (con->right_ali)
+    	if (con->field_width)
+    		field(c, con);
+	if (con->right_ali)
+		precision(c, con, strlen);
+    return (con->print);
 }

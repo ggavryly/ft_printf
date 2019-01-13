@@ -2,7 +2,6 @@
 NAME = libftprintf.a
 
 SRC =	ft_strlen.c \
-		ft_strdup.c \
 		ft_strchr.c \
 		ft_atoi.c \
 		ft_itoa.c \
@@ -14,12 +13,9 @@ SRC =	ft_strlen.c \
 		conv_s.c \
 		conv_p.c \
 		conv_d.c \
-		conv_i.c \
 		conv_x.c \
 		conv_o.c \
 		conv_u.c \
-		zero_case.c \
-		conv_perc.c \
 		ft_printf.c \
 		flags.c \
 		ft_atoi_base.c \

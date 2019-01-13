@@ -12,43 +12,45 @@
 
 #include "ft_printf.h"
 
-static void	print(t_type *con, int len)
+void	static field (t_type *con)
 {
-	int pri;
+	int field;
 
-	pri = len;
-	if (con->field_width)
+	field = con->field_width;
+	if (field > 1)
 	{
-		if (con->precision <= len && len && con->precision != 0)
-			pri = (con->precision == -1) ? (0) : con->precision;
-		con->field_width -= pri;
-		con->print = pri + ((con->field_width < 0) ? (0) : (con->field_width));
-	}
-	else if (!con->field_width)
-	{
-		if (con->precision < len && len)
-			pri = (con->precision) ? (con->precision) : (pri);
-		con->print = pri + ((con->field_width < 0) ? (0) : (con->field_width));
+		field -= 1;
+		con->print += field;
+		if (con->zero_pad && !con->left_ali)
+		{
+			while (field-- > 0)
+				write(1, "0", 1);
+		}
+		else
+			while (field-- > 0)
+				write(1," ", 1);
 	}
 }
 
-int    print_c(va_list ap, t_type con)
+int    print_c(t_type *con)
 {
     char c;
     
-    c = va_arg(ap, int);
-    print(&con, 1);
-    if (con.left_ali)
-    {
-        ft_putchar(c);
-        while (con.field_width--)
-            ft_putchar(' ' + con.zero_pad);
-    }
-    else if (con.right_ali)
-    {
-        while (con.field_width--)
-            ft_putchar(' ' + con.zero_pad);
-        ft_putchar(c);
-    }
-    return (con.print);
+    c = (char)va_arg(con->ap, int);
+	if (con->right_ali)
+		field(con);
+	ft_putchar(c);
+	if (con->left_ali)
+		field(con);
+	return (++con->print);
+}
+
+int    print_perc(t_type *con)
+{
+	if (con->right_ali)
+		field(con);
+	ft_putchar('%');
+	if (con->left_ali)
+		field(con);
+	return (++con->print);
 }

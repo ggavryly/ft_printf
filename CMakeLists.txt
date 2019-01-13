@@ -15,7 +15,6 @@ add_executable(printf1
         ../../Desktop/printf0/conv_o.c
         ../../Desktop/printf0/conv_x.c
 		../../Desktop/printf0/conv_u.c
-        ../../Desktop/printf0/conv_perc.c
         ../../Desktop/printf0/help.c
         ../../Desktop/printf0/ft_strlen.c
         ../../Desktop/printf0/ft_atoi.c
@@ -24,11 +23,9 @@ add_executable(printf1
         ../../Desktop/printf0/ft_putnbr.c
         ../../Desktop/printf0/ft_putstr.c
         ../../Desktop/printf0/ft_strchr.c
-        ../../Desktop/printf0/ft_strdup.c
-        ../../Desktop/printf0/ft_printf.c
+		../../Desktop/printf0/ft_printf.c
         ../../Desktop/printf0/main.c
         ../../Desktop/printf0/ft_itoa_base.c
         ../../Desktop/printf0/ft_atoi_base.c
-		../../Desktop/printf0/ft_strcmp.c
 		../../Desktop/printf0/scan_conv.c
 		)

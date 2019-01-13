@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-void    initialize_type(t_type *con)
+void    initialize_type(t_type *con, char conv)
 {
-    con->conversion = 0;
+    con->conversion = conv;
     con->field_width = 0;
     con->precision = 0;
     con->alt_form = 0;

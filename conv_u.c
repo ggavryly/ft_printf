@@ -75,28 +75,28 @@ static void	field(t_type *con, int strlen, char *str)
 	}
 }
 
-int 	print_u(va_list ap, t_type con)
+int 	print_u(t_type *con)
 {
 	uintmax_t k;
 	int strlen;
 	char *str;
 
-	k = flag_intoux(con, ap);
-	str = ft_itoa(k, '0');
+	k = flag_intoux(con);
+	str = itoa_base_u(k, 10 , 'a');
 	strlen = ft_strlen(str);
-	if (con.left_ali)
+	if (con->right_ali)
 	{
-		con.zero_pad = 0;
-		if (precision(k, &con, strlen) != -1)
-			ft_putstr(str);
-		field(&con, strlen, str);
+		if (con->field_width)
+			field(con, strlen, str);
 	}
-	else if (con.right_ali)
-	{
-		field(&con, strlen, str);
-		if (precision(k, &con, strlen) != -1)
+	else
+		con->zero_pad = 0;
+	if (con->precision || strlen)
+		if (precision(k, con, strlen) != -1)
 			ft_putstr(str);
-	}
+	if (con->left_ali)
+		if (con->field_width)
+			field(con, strlen, str);
 	free(str);
-	return (con.print);
+	return (con->print);
 }
