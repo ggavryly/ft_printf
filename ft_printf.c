@@ -21,7 +21,7 @@ int    scan_conv(const char *str, t_type *con, int str_len)
 	if (str[str_len])
 	{
 		initialize_type(con, str[str_len]);
-		if (!ft_strchr("cspdioOuxX%f", con->conversion))
+		if (!ft_strchr("csSpdioOuxX%f", con->conversion))
 		{
 			con->conversion = '\0';
 			return (-1);
@@ -51,8 +51,8 @@ int    print_conv(char con, t_type *c)
 		return (print_u(c));
     else if (con == 'x' || con == 'X')
     	return (print_x(c));
-//    else if (str[str_len - 1] == 'f')
-//        scan_f();
+	else if (con == 'f')
+		return (print_f(c));
 	else if (con == '%')
 		return (print_perc(c));
 	return (0);

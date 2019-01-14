@@ -64,6 +64,8 @@ int     con_len(const char *str);
 void    initialize_type(t_type *con, char conv);
 intmax_t	flag_intdi(t_type *con);
 intmax_t	flag_intoux(t_type *con);
+long double flag_float(t_type *con);
+char		*float_str(long double k);
 
 int    print_conv(char con, t_type *c);
 int    print_p(t_type *con);
@@ -73,6 +75,7 @@ int 	print_d(t_type *con);
 int 	print_x(t_type *con);
 int 	print_o(t_type *con);
 int 	print_u(t_type *con);
+int		print_f(t_type *con);
 int    print_perc(t_type *con);
 
 #endif

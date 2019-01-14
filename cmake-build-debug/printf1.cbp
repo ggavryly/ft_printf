@@ -88,6 +88,9 @@
 		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_d.c">
 			<Option target="printf1"/>
 		</Unit>
+		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_f.c">
+			<Option target="printf1"/>
+		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/conv_o.c">
 			<Option target="printf1"/>
 		</Unit>
@@ -104,6 +107,9 @@
 			<Option target="printf1"/>
 		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/flags.c">
+			<Option target="printf1"/>
+		</Unit>
+		<Unit filename="/Users/ggavryly/Desktop/printf0/float_str.c">
 			<Option target="printf1"/>
 		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/ft_atoi.c">

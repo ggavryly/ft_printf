@@ -7,6 +7,9 @@ CMakeFiles/printf1.dir/conv_c.c.o
 CMakeFiles/printf1.dir/conv_d.c.o
  /Users/ggavryly/Desktop/printf0/conv_d.c
  /Users/ggavryly/Desktop/printf0/ft_printf.h
+CMakeFiles/printf1.dir/conv_f.c.o
+ /Users/ggavryly/Desktop/printf0/conv_f.c
+ /Users/ggavryly/Desktop/printf0/ft_printf.h
 CMakeFiles/printf1.dir/conv_o.c.o
  /Users/ggavryly/Desktop/printf0/conv_o.c
  /Users/ggavryly/Desktop/printf0/ft_printf.h
@@ -24,6 +27,9 @@ CMakeFiles/printf1.dir/conv_x.c.o
  /Users/ggavryly/Desktop/printf0/ft_printf.h
 CMakeFiles/printf1.dir/flags.c.o
  /Users/ggavryly/Desktop/printf0/flags.c
+ /Users/ggavryly/Desktop/printf0/ft_printf.h
+CMakeFiles/printf1.dir/float_str.c.o
+ /Users/ggavryly/Desktop/printf0/float_str.c
  /Users/ggavryly/Desktop/printf0/ft_printf.h
 CMakeFiles/printf1.dir/ft_atoi.c.o
  /Users/ggavryly/Desktop/printf0/ft_atoi.c

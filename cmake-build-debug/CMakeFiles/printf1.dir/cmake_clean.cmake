@@ -20,6 +20,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf1.dir/ft_itoa_base.c.o"
   "CMakeFiles/printf1.dir/ft_atoi_base.c.o"
   "CMakeFiles/printf1.dir/scan_conv.c.o"
+  "CMakeFiles/printf1.dir/conv_f.c.o"
+  "CMakeFiles/printf1.dir/float_str.c.o"
   "printf1.pdb"
   "printf1"
 )

@@ -177,6 +177,33 @@ conv_d.c.s:
 	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_d.c.s
 .PHONY : conv_d.c.s
 
+conv_f.o: conv_f.c.o
+
+.PHONY : conv_f.o
+
+# target to build an object file
+conv_f.c.o:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_f.c.o
+.PHONY : conv_f.c.o
+
+conv_f.i: conv_f.c.i
+
+.PHONY : conv_f.i
+
+# target to preprocess a source file
+conv_f.c.i:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_f.c.i
+.PHONY : conv_f.c.i
+
+conv_f.s: conv_f.c.s
+
+.PHONY : conv_f.s
+
+# target to generate assembly for a file
+conv_f.c.s:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_f.c.s
+.PHONY : conv_f.c.s
+
 conv_o.o: conv_o.c.o
 
 .PHONY : conv_o.o
@@ -338,6 +365,33 @@ flags.s: flags.c.s
 flags.c.s:
 	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/flags.c.s
 .PHONY : flags.c.s
+
+float_str.o: float_str.c.o
+
+.PHONY : float_str.o
+
+# target to build an object file
+float_str.c.o:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/float_str.c.o
+.PHONY : float_str.c.o
+
+float_str.i: float_str.c.i
+
+.PHONY : float_str.i
+
+# target to preprocess a source file
+float_str.c.i:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/float_str.c.i
+.PHONY : float_str.c.i
+
+float_str.s: float_str.c.s
+
+.PHONY : float_str.s
+
+# target to generate assembly for a file
+float_str.c.s:
+	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/float_str.c.s
+.PHONY : float_str.c.s
 
 ft_atoi.o: ft_atoi.c.o
 
@@ -705,6 +759,9 @@ help:
 	@echo "... conv_d.o"
 	@echo "... conv_d.i"
 	@echo "... conv_d.s"
+	@echo "... conv_f.o"
+	@echo "... conv_f.i"
+	@echo "... conv_f.s"
 	@echo "... conv_o.o"
 	@echo "... conv_o.i"
 	@echo "... conv_o.s"
@@ -723,6 +780,9 @@ help:
 	@echo "... flags.o"
 	@echo "... flags.i"
 	@echo "... flags.s"
+	@echo "... float_str.o"
+	@echo "... float_str.i"
+	@echo "... float_str.s"
 	@echo "... ft_atoi.o"
 	@echo "... ft_atoi.i"
 	@echo "... ft_atoi.s"

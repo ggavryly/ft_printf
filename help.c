@@ -68,3 +68,16 @@ intmax_t	flag_intoux(t_type *con)
 		k = va_arg(con->ap, unsigned int);
 	return (k);
 }
+
+long double flag_float(t_type *con)
+{
+	long double k;
+
+	if (con->l32)
+		k = va_arg(con->ap, long double);
+	else if (con->l)
+		k = (long double)va_arg(con->ap, double);
+	else
+		k = (long double)va_arg(con->ap, double);
+	return (k);
+}

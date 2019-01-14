@@ -7,6 +7,9 @@ CMakeFiles/printf1.dir/conv_c.c.o: ../ft_printf.h
 CMakeFiles/printf1.dir/conv_d.c.o: ../conv_d.c
 CMakeFiles/printf1.dir/conv_d.c.o: ../ft_printf.h
 
+CMakeFiles/printf1.dir/conv_f.c.o: ../conv_f.c
+CMakeFiles/printf1.dir/conv_f.c.o: ../ft_printf.h
+
 CMakeFiles/printf1.dir/conv_o.c.o: ../conv_o.c
 CMakeFiles/printf1.dir/conv_o.c.o: ../ft_printf.h
 
@@ -24,6 +27,9 @@ CMakeFiles/printf1.dir/conv_x.c.o: ../ft_printf.h
 
 CMakeFiles/printf1.dir/flags.c.o: ../flags.c
 CMakeFiles/printf1.dir/flags.c.o: ../ft_printf.h
+
+CMakeFiles/printf1.dir/float_str.c.o: ../float_str.c
+CMakeFiles/printf1.dir/float_str.c.o: ../ft_printf.h
 
 CMakeFiles/printf1.dir/ft_atoi.c.o: ../ft_atoi.c
 CMakeFiles/printf1.dir/ft_atoi.c.o: ../ft_printf.h
