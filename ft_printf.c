@@ -12,6 +12,17 @@
 
 #include "ft_printf.h"
 
+void	flag_up(t_type *con)
+{
+	if (con->conversion == 'D' || con->conversion == 'U'
+		|| con->conversion == 'O' || con->conversion == 'F')
+	{}
+	if (!con->ll)
+		con->l = 1;
+	con->h = 0;
+	con->hh = 0;
+}
+
 int    scan_conv(const char *str, t_type *con, int str_len)
 {
 	int i;
@@ -21,7 +32,7 @@ int    scan_conv(const char *str, t_type *con, int str_len)
 	if (str[str_len])
 	{
 		initialize_type(con, str[str_len]);
-		if (!ft_strchr("csSpdioOuxX%f", con->conversion))
+		if (!ft_strchr("cspdDioOuUxX%fF", con->conversion))
 		{
 			con->conversion = '\0';
 			return (-1);
@@ -30,6 +41,9 @@ int    scan_conv(const char *str, t_type *con, int str_len)
 		scan_field(str, &i, con);
 		scan_precision(str, &i, con);
 		scan_change(str, &i, con);
+		if (con->conversion == 'D' || con->conversion == 'U'
+		|| con->conversion == 'O' || con->conversion == 'F')
+			flag_up(con);
 		return (con->conversion);
 	}
 	return (0);
@@ -43,15 +57,15 @@ int    print_conv(char con, t_type *c)
 		return (print_s(c));
     else if (con == 'p')
 		return (print_p(c));
-    else if (con == 'd' || con == 'i')
+    else if (con == 'd' || con == 'i' || con == 'D')
 		return (print_d(c));
-	else if (con == 'o')
+	else if (con == 'o' || con == 'O')
 		return (print_o(c));
-	else if (con == 'u')
+	else if (con == 'u' || con == 'U')
 		return (print_u(c));
     else if (con == 'x' || con == 'X')
     	return (print_x(c));
-	else if (con == 'f')
+	else if (con == 'f' || con == 'F')
 		return (print_f(c));
 	else if (con == '%')
 		return (print_perc(c));

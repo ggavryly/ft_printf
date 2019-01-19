@@ -81,3 +81,27 @@ long double flag_float(t_type *con)
 		k = (long double)va_arg(con->ap, double);
 	return (k);
 }
+
+char		*float_up(char *buf)
+{
+	int i;
+	int start;
+
+	start = 0;
+	while (buf[start] != '.')
+		start++;
+	start++;
+	i = start;
+	while (buf[i])
+	{
+		if (buf[i] == ':')
+		{
+			buf[i] = '0';
+			buf[i - 1] += 1;
+			i = start;
+			continue ;
+		}
+		i++;
+	}
+	return (buf);
+}

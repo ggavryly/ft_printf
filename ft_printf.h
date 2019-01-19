@@ -52,7 +52,6 @@ char	*ft_strchr(const char *s, int c);
 size_t	ft_strlen(const char *s);
 char	*itoa_base(intmax_t value, uintmax_t base, char a_a32);
 char	*itoa_base_u(uintmax_t value, uintmax_t  base, char a_a32);
-long long int    atoi_base(char *nbr, int base, char a_a32);
 
 int     scan_conv(const char *str, t_type *con, int str_len);
 void     scan_precision(const char *str, int *iter, t_type *con);
@@ -65,7 +64,8 @@ void    initialize_type(t_type *con, char conv);
 intmax_t	flag_intdi(t_type *con);
 intmax_t	flag_intoux(t_type *con);
 long double flag_float(t_type *con);
-char		*float_str(long double k);
+char		*float_str(long double k, t_type *con);
+char		*float_up(char *buf);
 
 int    print_conv(char con, t_type *c);
 int    print_p(t_type *con);

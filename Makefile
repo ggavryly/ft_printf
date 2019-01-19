@@ -16,9 +16,10 @@ SRC =	ft_strlen.c \
 		conv_x.c \
 		conv_o.c \
 		conv_u.c \
+		conv_f.c \
+		float_str.c \
 		ft_printf.c \
 		flags.c \
-		ft_atoi_base.c \
 		ft_itoa_base.c \
 		help.c 
 

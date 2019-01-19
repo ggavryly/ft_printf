@@ -5,8 +5,8 @@
 int main(void)
 {
 	ft_putstr("-->");
-	printf("<-- ft_printf | exit code - %d\n-->", ft_printf("%Lf", 00.015625L));
-	printf("<-- printf    | exit code - %d",         printf("%f", 00.15625f));
+	printf("<-- ft_printf | exit code - %d\n-->", ft_printf("{%05.s}", 0));
+	printf("<-- printf    | exit code - %d",         printf("{%05.s}", 0));
 
 	printf("\n");
 	float f = 0.15625;

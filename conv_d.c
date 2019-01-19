@@ -48,7 +48,6 @@ static void	zero_pad(int field, t_type *con, intmax_t *k)
 		while (field-- > 0)
 			write(1, " ", 1);
 	}
-
 }
 
 static int	precision(intmax_t k, t_type *con, int strlen)
