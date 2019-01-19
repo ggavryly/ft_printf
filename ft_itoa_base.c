@@ -26,23 +26,29 @@ static uintmax_t	swap_sign(intmax_t value, int *sign, uintmax_t base)
 	return (res);
 }
 
-char	*itoa_base(intmax_t value, uintmax_t  base, char a_a32)
+static	int			numbers(uintmax_t value)
+{
+	int i;
+
+	i = 0;
+	while (value >= 10)
+	{
+		value /= 10;
+		i++;
+	}
+	return (i);
+}
+
+char				*itoa_base(intmax_t value, uintmax_t base, char a_a32)
 {
 	int			i;
 	char		*str;
 	uintmax_t	tmp;
+	int			sign;
 
-	int             sign;
-	
-	i = 0;
 	sign = 0;
 	tmp = swap_sign(value, &sign, base);
-	while (tmp >= base)
-	{
-		tmp /= base;
-		i++;
-	}
-	tmp = (value < 0 && base == 10) ? (-value) : value;
+	i = numbers(tmp);
 	if (!(str = (char *)malloc(sizeof(char) * (i + 1 + sign))))
 		return (NULL);
 	str[i + 1 + sign] = '\0';
@@ -58,7 +64,7 @@ char	*itoa_base(intmax_t value, uintmax_t  base, char a_a32)
 	return (str);
 }
 
-char	*itoa_base_u(uintmax_t value, uintmax_t  base, char a_a32)
+char				*itoa_base_u(uintmax_t value, uintmax_t base, char a_a32)
 {
 	int			i;
 	char		*str;
@@ -66,12 +72,7 @@ char	*itoa_base_u(uintmax_t value, uintmax_t  base, char a_a32)
 
 	i = 0;
 	tmp = value;
-	while (tmp >= base)
-	{
-		tmp /= base;
-		i++;
-	}
-	tmp = value;
+	i = numbers(tmp);
 	if (!(str = (char *)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	str[i + 1] = '\0';

@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static void	sign(intmax_t *k,t_type *con)
+static void	sign(intmax_t *k, t_type *con)
 {
 	if (((con->sign) || *k < 0 || con->space))
 	{
@@ -64,7 +64,7 @@ static int	precision(intmax_t k, t_type *con, int strlen)
 		while (prec-- > 0)
 			write(1, "0", 1);
 	}
-	else if  (prec == -1 && k == 0)
+	else if (prec == -1 && k == 0)
 		return (-1);
 	else if (prec == 0 || prec < print)
 		con->print += print;
@@ -99,11 +99,11 @@ static void	field(t_type *con, int strlen, char *str, intmax_t *k)
 	}
 }
 
-int 	print_d(t_type *con)
+int			print_d(t_type *con)
 {
-	intmax_t k;
-	int strlen;
-	char *str;
+	intmax_t	k;
+	int			strlen;
+	char		*str;
 
 	k = flag_intdi(con);
 	str = ft_itoa(k, '0');

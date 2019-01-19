@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static void field_put(t_type *con, int field, int print)
+static void	field_put(t_type *con, int field, int print)
 {
 	field -= print;
 	con->print += field;
@@ -23,13 +23,13 @@ static void field_put(t_type *con, int field, int print)
 	}
 	else
 		while (field-- > 0)
-			write(1," ", 1);
+			write(1, " ", 1);
 }
 
 static void	print_null(t_type *con)
 {
-	char *k;
-	int i;
+	char	*k;
+	int		i;
 
 	k = "(null)";
 	i = 0;
@@ -87,14 +87,9 @@ static void	precision(char *str, t_type *con, int strlen)
 
 	prec = con->precision;
 	i = 0;
-	if (prec > 0)
+	if (prec > 0 && strlen > prec)
 	{
-		if (strlen < prec)
-		{
-			ft_putstr(str);
-			con->print += strlen;
-		}
-		else if (prec < strlen)
+		if (prec < strlen)
 		{
 			while (prec-- > 0)
 			{
@@ -103,34 +98,34 @@ static void	precision(char *str, t_type *con, int strlen)
 			}
 		}
 	}
-	else if (prec == 0)
+	else if (prec == 0 || strlen < prec)
 	{
 		con->print += strlen;
 		ft_putstr(str);
 	}
 }
 
-int    print_s(t_type *con)
+int			print_s(t_type *con)
 {
-    char *c;
-    int strlen;
+	char	*c;
+	int		strlen;
 
-    c = va_arg(con->ap, char*);
-    strlen = ft_strlen(c);
-    if (!c)
-    {
-    	print_null(con);
-    	return (con->print);
-    }
-    if (con->left_ali)
-    	precision(c, con, strlen);
-    if (con->left_ali)
-    	if (con->field_width)
-    		field(c, con);
-    if (con->right_ali)
-    	if (con->field_width)
-    		field(c, con);
+	c = va_arg(con->ap, char*);
+	strlen = ft_strlen(c);
+	if (!c)
+	{
+		print_null(con);
+		return (con->print);
+	}
+	if (con->left_ali)
+		precision(c, con, strlen);
+	if (con->left_ali)
+		if (con->field_width)
+			field(c, con);
+	if (con->right_ali)
+		if (con->field_width)
+			field(c, con);
 	if (con->right_ali)
 		precision(c, con, strlen);
-    return (con->print);
+	return (con->print);
 }

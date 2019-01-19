@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   help->c                                             :+:      :+:    :+:   */
+/*   help.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ggavryly <marvin@42->fr>                    +#+  +:+       +#+        */
+/*   By: ggavryly <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/20 10:35:50 by ggavryly          #+#    #+#             */
-/*   Updated: 2018/12/20 10:36:09 by ggavryly         ###   ########->fr       */
+/*   Created: 2019/01/19 20:47:19 by ggavryly          #+#    #+#             */
+/*   Updated: 2019/01/19 20:47:26 by ggavryly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    ft_putnstr(const char *str, int n)
+void		ft_putnstr(const char *str, int n)
 {
-    int i;
+	int i;
 
-    i = 0;
-    if (str)
-    {
-        while (i < n && str[i])
-        {
-            ft_putchar(str[i]);
-            i++;
-        }
-    }
+	i = 0;
+	if (str)
+	{
+		while (i < n && str[i])
+		{
+			ft_putchar(str[i]);
+			i++;
+		}
+	}
 }
 
 intmax_t	flag_intdi(t_type *con)
@@ -32,7 +32,7 @@ intmax_t	flag_intdi(t_type *con)
 	intmax_t k;
 
 	if (con->hh)
-		k = (char)va_arg(con->ap,  int);
+		k = (char)va_arg(con->ap, int);
 	else if (con->h)
 		k = (short)va_arg(con->ap, int);
 	else if (con->l)
@@ -69,7 +69,7 @@ intmax_t	flag_intoux(t_type *con)
 	return (k);
 }
 
-long double flag_float(t_type *con)
+long double	flag_float(t_type *con)
 {
 	long double k;
 

@@ -12,21 +12,21 @@
 
 #include "ft_printf.h"
 
-void    initialize_type(t_type *con, char conv)
+void	initialize_type(t_type *con, char conv)
 {
-    con->conversion = conv;
-    con->field_width = 0;
-    con->precision = 0;
-    con->alt_form = 0;
-    con->left_ali = 0;
-    con->right_ali = 0;
-    con->sign = 0;
-    con->space = 0;
-    con->zero_pad = 0;
-    con->hh = 0;
-    con->h = 0;
-    con->l = 0;
-    con->ll = 0;
-    con->l32 = 0;
-    con->print = 0;
+	con->conversion = conv;
+	con->field_width = 0;
+	con->precision = 0;
+	con->alt_form = 0;
+	con->left_ali = 0;
+	con->right_ali = 0;
+	con->sign = 0;
+	con->space = 0;
+	con->zero_pad = 0;
+	con->hh = 0;
+	con->h = 0;
+	con->l = 0;
+	con->ll = 0;
+	con->l32 = 0;
+	con->print = 0;
 }

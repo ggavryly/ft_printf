@@ -16,12 +16,11 @@ static uintmax_t	init(intmax_t val, int *sign)
 {
 	uintmax_t res;
 
-	res = 0;
 	if (val < 0)
 	{
 		if (*sign)
 			*sign = 3;
-		res = (uintmax_t) -val;
+		res = (uintmax_t)-val;
 	}
 	else
 	{
@@ -32,12 +31,11 @@ static uintmax_t	init(intmax_t val, int *sign)
 	return (res);
 }
 
-static char *	str_mem(uintmax_t res, int *count1, int sign)
+static	char		*str_mem(uintmax_t res, int *count1, int sign)
 {
-	char *str;
-	int count;
+	char	*str;
+	int		count;
 
-	str = NULL;
 	count = 0;
 	if (res == 0)
 		count++;
@@ -52,11 +50,12 @@ static char *	str_mem(uintmax_t res, int *count1, int sign)
 	*count1 = count;
 	return (str);
 }
-void	ft_putnbr(intmax_t val, int sign)
+
+void				ft_putnbr(intmax_t val, int sign)
 {
-	uintmax_t print;
-	int count;
-	char *str;
+	uintmax_t	print;
+	int			count;
+	char		*str;
 
 	count = 0;
 	print = init(val, &sign);

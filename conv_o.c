@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static void hash(t_type *con, uintmax_t *k)
+static void	hash(t_type *con, uintmax_t *k)
 {
 	if (con->alt_form && *k != 0)
 	{
@@ -42,7 +42,6 @@ static void	zero_pad(int field, t_type *con, uintmax_t *k)
 		while (field-- > 0)
 			write(1, " ", 1);
 	}
-
 }
 
 static int	precision(uintmax_t k, t_type *con, int strlen)
@@ -59,7 +58,7 @@ static int	precision(uintmax_t k, t_type *con, int strlen)
 		while (prec-- > 0)
 			write(1, "0", 1);
 	}
-	else if  (prec == -1 && k == 0)
+	else if (prec == -1 && k == 0)
 		return (-1);
 	else if (prec == 0 || prec < print)
 		con->print += print;
@@ -94,11 +93,11 @@ static void	field(t_type *con, int strlen, char *str, uintmax_t *k)
 	}
 }
 
-int 	print_o(t_type *con)
+int			print_o(t_type *con)
 {
-	uintmax_t k;
-	int strlen;
-	char *str;
+	uintmax_t	k;
+	int			strlen;
+	char		*str;
 
 	k = flag_intoux(con);
 	str = itoa_base(k, 8, 'a');

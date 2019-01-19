@@ -12,7 +12,6 @@
 
 #include "ft_printf.h"
 
-
 static void	field(t_type *con, int strlen)
 {
 	int print;
@@ -33,7 +32,7 @@ static void	field(t_type *con, int strlen)
 	}
 }
 
-static void precision(t_type *con, int strlen, char *str)
+static void	precision(t_type *con, int strlen, char *str)
 {
 	int prec;
 
@@ -55,13 +54,13 @@ static void precision(t_type *con, int strlen, char *str)
 	}
 }
 
-int    print_p(t_type *con)
+int			print_p(t_type *con)
 {
-	uintmax_t k;
-	char *str;
-	int strlen;
-	
-	k = (uintmax_t)va_arg(con->ap, void *);
+	uintmax_t	k;
+	char		*str;
+	int			strlen;
+
+	k = (uintmax_t)va_arg(con->ap, void*);
 	str = itoa_base_u(k, 16, 'a');
 	strlen = (((k == 0 && con->precision == -1) ? (0) : (ft_strlen(str))));
 	if (con->right_ali)

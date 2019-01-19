@@ -12,18 +12,15 @@
 
 #include "ft_printf.h"
 
-void	flag_up(t_type *con)
+void		flag_up(t_type *con)
 {
-	if (con->conversion == 'D' || con->conversion == 'U'
-		|| con->conversion == 'O' || con->conversion == 'F')
-	{}
 	if (!con->ll)
 		con->l = 1;
 	con->h = 0;
 	con->hh = 0;
 }
 
-int    scan_conv(const char *str, t_type *con, int str_len)
+int			scan_conv(const char *str, t_type *con, int str_len)
 {
 	int i;
 
@@ -49,22 +46,22 @@ int    scan_conv(const char *str, t_type *con, int str_len)
 	return (0);
 }
 
-int    print_conv(char con, t_type *c)
+int			print_conv(char con, t_type *c)
 {
 	if (con == 'c')
 		return (print_c(c));
 	else if (con == 's')
 		return (print_s(c));
-    else if (con == 'p')
+	else if (con == 'p')
 		return (print_p(c));
-    else if (con == 'd' || con == 'i' || con == 'D')
+	else if (con == 'd' || con == 'i' || con == 'D')
 		return (print_d(c));
 	else if (con == 'o' || con == 'O')
 		return (print_o(c));
 	else if (con == 'u' || con == 'U')
 		return (print_u(c));
-    else if (con == 'x' || con == 'X')
-    	return (print_x(c));
+	else if (con == 'x' || con == 'X')
+		return (print_x(c));
 	else if (con == 'f' || con == 'F')
 		return (print_f(c));
 	else if (con == '%')
@@ -72,11 +69,11 @@ int    print_conv(char con, t_type *c)
 	return (0);
 }
 
-int     con_len(const char *str)
+int			con_len(const char *str)
 {
-	int i;
-	int res;
-	char *s;
+	int		i;
+	int		res;
+	char	*s;
 
 	i = 0;
 	res = 1;
@@ -94,13 +91,13 @@ int     con_len(const char *str)
 	return (res);
 }
 
-int ft_printf(const char *format, ...)
+int			ft_printf(const char *format, ...)
 {
-	int conv_len;
-	t_type con;
-	int i;
-	int print;
-	
+	int		conv_len;
+	t_type	con;
+	int		i;
+	int		print;
+
 	i = 0;
 	print = 0;
 	va_start(con.ap, format);
@@ -118,6 +115,6 @@ int ft_printf(const char *format, ...)
 			ft_putchar(format[i++]);
 		}
 	}
-	va_end (con.ap);
+	va_end(con.ap);
 	return (print);
 }

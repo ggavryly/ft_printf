@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static void sign(long double *k, t_type *con)
+static void	sign(long double *k, t_type *con)
 {
 	if (((con->sign) || *k < 0.0 || con->space))
 	{
@@ -50,7 +50,7 @@ static void	zero_pad(int field, t_type *con, long double *k)
 	}
 }
 
-static void field(long double *k, int len, t_type *con)
+static void	field(long double *k, int len, t_type *con)
 {
 	int field;
 	int print;
@@ -70,11 +70,11 @@ static void field(long double *k, int len, t_type *con)
 	}
 }
 
-int print_f(t_type *con)
+int			print_f(t_type *con)
 {
-	long double k;
-	int len;
-	char *buf;
+	long double	k;
+	int			len;
+	char		*buf;
 
 	k = flag_float(con);
 	buf = float_str(((k < 0.0) ? (-k) : (k)), con);

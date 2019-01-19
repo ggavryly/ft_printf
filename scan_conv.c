@@ -12,10 +12,10 @@
 
 #include "ft_printf.h"
 
-void    scan_flags(const char *str, int *iter, t_type *con)
+void		scan_flags(const char *str, int *iter, t_type *con)
 {
-	int i;
-	
+	int	i;
+
 	i = *iter;
 	con->right_ali = 1;
 	while (str[i] == '0' || str[i] == '+'
@@ -39,7 +39,7 @@ void    scan_flags(const char *str, int *iter, t_type *con)
 	*iter = i;
 }
 
-void     scan_precision(const char *str, int *iter, t_type *con)
+void		scan_precision(const char *str, int *iter, t_type *con)
 {
 	int res;
 	int i;
@@ -59,11 +59,11 @@ void     scan_precision(const char *str, int *iter, t_type *con)
 	}
 }
 
-void     scan_field(const char *str, int *iter, t_type *con)
+void		scan_field(const char *str, int *iter, t_type *con)
 {
 	int res;
 	int i;
-	
+
 	i = *iter;
 	res = ft_atoi(str + i);
 	while (str[i] >= '0' && str[i] <= '9')
@@ -72,10 +72,10 @@ void     scan_field(const char *str, int *iter, t_type *con)
 	con->field_width = res;
 }
 
-void    scan_change(const char *str, int *iter, t_type *con)
+void		scan_change(const char *str, int *iter, t_type *con)
 {
-	int i;
-	
+	int	i;
+
 	i = *iter;
 	if (str[i] == 'h' && str[i + 1] == 'h')
 		con->hh = 1;

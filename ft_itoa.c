@@ -27,22 +27,30 @@ static uintmax_t	swap_sign(intmax_t value, int *sign, char sig)
 	return (res);
 }
 
-char	*ft_itoa(intmax_t value, char sig)
+static	int			numbers(uintmax_t value)
+{
+	int i;
+
+	i = 0;
+	while (value >= 10)
+	{
+		value /= 10;
+		i++;
+	}
+	return (i);
+}
+
+char				*ft_itoa(intmax_t value, char sig)
 {
 	int			i;
 	char		*str;
 	uintmax_t	tmp;
-	int             sign;
+	int			sign;
 
 	i = 0;
 	sign = 0;
 	tmp = swap_sign(value, &sign, sig);
-	while (tmp >= 10)
-	{
-		tmp /= 10;
-		i++;
-	}
-	tmp = (value < 0) ? (-value) : value;
+	i = numbers(tmp);
 	if (!(str = (char *)malloc(sizeof(char) * (i + 1 + sign))))
 		return (NULL);
 	str[i + 1 + sign] = '\0';

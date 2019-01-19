@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	static field (t_type *con)
+static void	field(t_type *con)
 {
 	int field;
 
@@ -28,15 +28,15 @@ void	static field (t_type *con)
 		}
 		else
 			while (field-- > 0)
-				write(1," ", 1);
+				write(1, " ", 1);
 	}
 }
 
-int    print_c(t_type *con)
+int			print_c(t_type *con)
 {
-    char c;
-    
-    c = (char)va_arg(con->ap, int);
+	char	c;
+
+	c = (char)va_arg(con->ap, int);
 	if (con->right_ali)
 		field(con);
 	ft_putchar(c);
@@ -45,7 +45,7 @@ int    print_c(t_type *con)
 	return (++con->print);
 }
 
-int    print_perc(t_type *con)
+int			print_perc(t_type *con)
 {
 	if (con->right_ali)
 		field(con);

@@ -42,7 +42,7 @@ static int	precision(uintmax_t k, t_type *con, int strlen)
 		while (prec-- > 0)
 			write(1, "0", 1);
 	}
-	else if  (prec == -1 && k == 0)
+	else if (prec == -1 && k == 0)
 		return (-1);
 	else if (prec == 0 || prec < print)
 		con->print += print;
@@ -75,14 +75,14 @@ static void	field(t_type *con, int strlen, char *str)
 	}
 }
 
-int 	print_u(t_type *con)
+int			print_u(t_type *con)
 {
-	uintmax_t k;
-	int strlen;
-	char *str;
+	uintmax_t	k;
+	int			strlen;
+	char		*str;
 
 	k = flag_intoux(con);
-	str = itoa_base_u(k, 10 , 'a');
+	str = itoa_base_u(k, 10, 'a');
 	strlen = ft_strlen(str);
 	if (con->right_ali)
 	{

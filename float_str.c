@@ -14,16 +14,14 @@
 
 static void	float_put_before(char **str, int *len, long double k, int *iter)
 {
-	char *tmp;
-	int len0;
-	long long t;
+	char	*tmp;
+	int		len0;
 
 	len0 = len[0];
 	tmp = *str;
 	*iter = len0;
 	while (len0)
 	{
-		t = (((long long)(k)) % 10);
 		tmp[len0 - 1] = (((long long)(k)) % 10) + '0';
 		len0--;
 		k /= 10;
@@ -33,9 +31,9 @@ static void	float_put_before(char **str, int *len, long double k, int *iter)
 
 static void	float_put_after(char **str, int *len, long double k, int *iter)
 {
-	char *tmp;
-	int len1;
-	int i;
+	char	*tmp;
+	int		len1;
+	int		i;
 
 	len1 = len[1];
 	i = *iter;
@@ -53,7 +51,7 @@ static void	float_put_after(char **str, int *len, long double k, int *iter)
 	*str = tmp;
 }
 
-static int float_len_before(long double k)
+static int	float_len_before(long double k)
 {
 	int len;
 
@@ -73,9 +71,8 @@ static int float_len_before(long double k)
 	return (len);
 }
 
-static int float_len_after(t_type *con)
+static int	float_len_after(t_type *con)
 {
-
 	int prec;
 
 	prec = con->precision;
@@ -86,12 +83,12 @@ static int float_len_after(t_type *con)
 	return (prec);
 }
 
-char *float_str(long double k, t_type *con)
+char		*float_str(long double k, t_type *con)
 {
-	int len[2];
-	int t;
-	char *str;
-	int i;
+	int		len[2];
+	int		t;
+	char	*str;
+	int		i;
 
 	len[0] = float_len_before(k);
 	len[1] = float_len_after(con);
@@ -102,12 +99,12 @@ char *float_str(long double k, t_type *con)
 	if (!(str = (char *)malloc(sizeof(char) * len[0] + len[1] + 1 + t)))
 		return (NULL);
 	str[len[0] + len[1] + t] = '\0';
-	float_put_before(&str,len,k,&i);
+	float_put_before(&str, len, k, &i);
 	if (t)
 	{
 		str[len[0]] = '.';
 		i++;
 	}
-	float_put_after(&str,len,k,&i);
+	float_put_after(&str, len, k, &i);
 	return (str);
 }
