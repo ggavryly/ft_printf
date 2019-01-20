@@ -304,22 +304,9 @@ CMakeFiles/printf1.dir/ft_itoa_base.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf1.dir/ft_itoa_base.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggavryly/Desktop/printf0/ft_itoa_base.c -o CMakeFiles/printf1.dir/ft_itoa_base.c.s
 
-CMakeFiles/printf1.dir/ft_atoi_base.c.o: CMakeFiles/printf1.dir/flags.make
-CMakeFiles/printf1.dir/ft_atoi_base.c.o: ../ft_atoi_base.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/printf1.dir/ft_atoi_base.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf1.dir/ft_atoi_base.c.o   -c /Users/ggavryly/Desktop/printf0/ft_atoi_base.c
-
-CMakeFiles/printf1.dir/ft_atoi_base.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf1.dir/ft_atoi_base.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ggavryly/Desktop/printf0/ft_atoi_base.c > CMakeFiles/printf1.dir/ft_atoi_base.c.i
-
-CMakeFiles/printf1.dir/ft_atoi_base.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf1.dir/ft_atoi_base.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggavryly/Desktop/printf0/ft_atoi_base.c -o CMakeFiles/printf1.dir/ft_atoi_base.c.s
-
 CMakeFiles/printf1.dir/scan_conv.c.o: CMakeFiles/printf1.dir/flags.make
 CMakeFiles/printf1.dir/scan_conv.c.o: ../scan_conv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/printf1.dir/scan_conv.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/printf1.dir/scan_conv.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf1.dir/scan_conv.c.o   -c /Users/ggavryly/Desktop/printf0/scan_conv.c
 
 CMakeFiles/printf1.dir/scan_conv.c.i: cmake_force
@@ -332,7 +319,7 @@ CMakeFiles/printf1.dir/scan_conv.c.s: cmake_force
 
 CMakeFiles/printf1.dir/conv_f.c.o: CMakeFiles/printf1.dir/flags.make
 CMakeFiles/printf1.dir/conv_f.c.o: ../conv_f.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/printf1.dir/conv_f.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/printf1.dir/conv_f.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf1.dir/conv_f.c.o   -c /Users/ggavryly/Desktop/printf0/conv_f.c
 
 CMakeFiles/printf1.dir/conv_f.c.i: cmake_force
@@ -345,7 +332,7 @@ CMakeFiles/printf1.dir/conv_f.c.s: cmake_force
 
 CMakeFiles/printf1.dir/float_str.c.o: CMakeFiles/printf1.dir/flags.make
 CMakeFiles/printf1.dir/float_str.c.o: ../float_str.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/printf1.dir/float_str.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/printf1.dir/float_str.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf1.dir/float_str.c.o   -c /Users/ggavryly/Desktop/printf0/float_str.c
 
 CMakeFiles/printf1.dir/float_str.c.i: cmake_force
@@ -377,7 +364,6 @@ printf1_OBJECTS = \
 "CMakeFiles/printf1.dir/ft_printf.c.o" \
 "CMakeFiles/printf1.dir/main.c.o" \
 "CMakeFiles/printf1.dir/ft_itoa_base.c.o" \
-"CMakeFiles/printf1.dir/ft_atoi_base.c.o" \
 "CMakeFiles/printf1.dir/scan_conv.c.o" \
 "CMakeFiles/printf1.dir/conv_f.c.o" \
 "CMakeFiles/printf1.dir/float_str.c.o"
@@ -404,13 +390,12 @@ printf1: CMakeFiles/printf1.dir/ft_strchr.c.o
 printf1: CMakeFiles/printf1.dir/ft_printf.c.o
 printf1: CMakeFiles/printf1.dir/main.c.o
 printf1: CMakeFiles/printf1.dir/ft_itoa_base.c.o
-printf1: CMakeFiles/printf1.dir/ft_atoi_base.c.o
 printf1: CMakeFiles/printf1.dir/scan_conv.c.o
 printf1: CMakeFiles/printf1.dir/conv_f.c.o
 printf1: CMakeFiles/printf1.dir/float_str.c.o
 printf1: CMakeFiles/printf1.dir/build.make
 printf1: CMakeFiles/printf1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking C executable printf1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking C executable printf1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/printf1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

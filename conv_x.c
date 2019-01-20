@@ -28,7 +28,7 @@ static int	hash(t_type *con, uintmax_t *k)
 
 static void	zero_pad(int field, t_type *con, uintmax_t *k)
 {
-	if (con->alt_form)
+	if (con->alt_form && !con->precision)
 		hash(con, k);
 	if (field >= 0 && !con->precision)
 	{
@@ -42,10 +42,9 @@ static void	zero_pad(int field, t_type *con, uintmax_t *k)
 		while (field-- > 0)
 			write(1, " ", 1);
 	}
-
 }
 
-static int	precision(uintmax_t k, t_type *con, int strlen)
+static int	precision(char *str, t_type *con, int strlen)
 {
 	int print;
 	int prec;
@@ -59,14 +58,14 @@ static int	precision(uintmax_t k, t_type *con, int strlen)
 		while (prec-- > 0)
 			write(1, "0", 1);
 	}
-	else if  (prec == -1 && k == 0)
+	else if (prec == -1 && str[0] == '0')
 		return (-1);
 	else if (prec == 0 || prec < print)
 		con->print += print;
 	return (1);
 }
 
-static void field(t_type *con, int strlen, char *str, uintmax_t *k)
+static void	field(t_type *con, int strlen, char *str, uintmax_t *k)
 {
 	int prec;
 	int field;
@@ -113,7 +112,7 @@ int			print_x(t_type *con)
 	if (con->alt_form)
 		hash(con, &k);
 	if (con->precision || strlen)
-		if (precision(k, con, strlen) != -1)
+		if (precision(str, con, strlen) != -1)
 			ft_putstr(str);
 	if (con->left_ali)
 		if (con->field_width)

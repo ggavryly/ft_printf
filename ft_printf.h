@@ -19,6 +19,16 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <limits.h>
+# include <wchar.h>
+
+# define BLACK(x)	"\033[37m"x"\033[0m"
+# define RED(x)		"\033[31m"x"\033[0m"
+# define GREEN(x)	"\033[32m"x"\033[0m"
+# define YELLOW(x)	"\033[33m"x"\033[0m"
+# define BLUE(x)	"\033[34m"x"\033[0m"
+# define PURPLE(x)	"\033[35m"x"\033[0m"
+# define CYAN(x)	"\033[36m"x"\033[0m"
+# define BLACK(x)	"\033[37m"x"\033[0m"
 
 typedef struct	s_conv
 {

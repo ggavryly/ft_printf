@@ -115,9 +115,6 @@
 		<Unit filename="/Users/ggavryly/Desktop/printf0/ft_atoi.c">
 			<Option target="printf1"/>
 		</Unit>
-		<Unit filename="/Users/ggavryly/Desktop/printf0/ft_atoi_base.c">
-			<Option target="printf1"/>
-		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/ft_itoa.c">
 			<Option target="printf1"/>
 		</Unit>

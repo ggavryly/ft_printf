@@ -28,5 +28,7 @@ void	initialize_type(t_type *con, char conv)
 	con->l = 0;
 	con->ll = 0;
 	con->l32 = 0;
+	con->j = 0;
+	con->z = 0;
 	con->print = 0;
 }

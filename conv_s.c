@@ -26,31 +26,6 @@ static void	field_put(t_type *con, int field, int print)
 			write(1, " ", 1);
 }
 
-static void	print_null(t_type *con)
-{
-	char	*k;
-	int		i;
-
-	k = "(null)";
-	i = 0;
-	if (con->precision != -1)
-	{
-		if (con->precision)
-		{
-			while (k[i] && con->precision--)
-			{
-				con->print++;
-				ft_putchar(k[i++]);
-			}
-		}
-		else
-		{
-			ft_putstr("(null)");
-			con->print += 6;
-		}
-	}
-}
-
 static void	field(char *str, t_type *con)
 {
 	int field;
@@ -78,6 +53,33 @@ static void	field(char *str, t_type *con)
 		else
 			field_put(con, field, print);
 	}
+}
+
+static void	print_null(t_type *con)
+{
+	char	*k;
+	int		i;
+
+	k = "(null)";
+	i = 0;
+	if (con->precision != -1)
+	{
+		if (con->precision)
+		{
+			while (k[i] && con->precision--)
+			{
+				con->print++;
+				ft_putchar(k[i++]);
+			}
+		}
+		else
+		{
+			ft_putstr("(null)");
+			con->print += 6;
+		}
+	}
+	else if (con->precision == -1)
+		field(NULL, con);
 }
 
 static void	precision(char *str, t_type *con, int strlen)

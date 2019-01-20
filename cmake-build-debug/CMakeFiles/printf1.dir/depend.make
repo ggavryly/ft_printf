@@ -34,9 +34,6 @@ CMakeFiles/printf1.dir/float_str.c.o: ../ft_printf.h
 CMakeFiles/printf1.dir/ft_atoi.c.o: ../ft_atoi.c
 CMakeFiles/printf1.dir/ft_atoi.c.o: ../ft_printf.h
 
-CMakeFiles/printf1.dir/ft_atoi_base.c.o: ../ft_atoi_base.c
-CMakeFiles/printf1.dir/ft_atoi_base.c.o: ../ft_printf.h
-
 CMakeFiles/printf1.dir/ft_itoa.c.o: ../ft_itoa.c
 CMakeFiles/printf1.dir/ft_itoa.c.o: ../ft_printf.h
 

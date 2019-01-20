@@ -29,7 +29,7 @@ int			scan_conv(const char *str, t_type *con, int str_len)
 	if (str[str_len])
 	{
 		initialize_type(con, str[str_len]);
-		if (!ft_strchr("cspdDioOuUxX%fF", con->conversion))
+		if (!ft_strchr("cCspdDioOuUxX%fF", con->conversion))
 		{
 			con->conversion = '\0';
 			return (-1);
@@ -48,7 +48,7 @@ int			scan_conv(const char *str, t_type *con, int str_len)
 
 int			print_conv(char con, t_type *c)
 {
-	if (con == 'c')
+	if (con == 'c' || con == 'C')
 		return (print_c(c));
 	else if (con == 's')
 		return (print_s(c));

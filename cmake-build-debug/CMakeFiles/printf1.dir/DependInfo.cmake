@@ -15,7 +15,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ggavryly/Desktop/printf0/flags.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/flags.c.o"
   "/Users/ggavryly/Desktop/printf0/float_str.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/float_str.c.o"
   "/Users/ggavryly/Desktop/printf0/ft_atoi.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_atoi.c.o"
-  "/Users/ggavryly/Desktop/printf0/ft_atoi_base.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_atoi_base.c.o"
   "/Users/ggavryly/Desktop/printf0/ft_itoa.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_itoa.c.o"
   "/Users/ggavryly/Desktop/printf0/ft_itoa_base.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_itoa_base.c.o"
   "/Users/ggavryly/Desktop/printf0/ft_printf.c" "/Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/printf1.dir/ft_printf.c.o"

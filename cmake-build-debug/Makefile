@@ -420,33 +420,6 @@ ft_atoi.c.s:
 	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_atoi.c.s
 .PHONY : ft_atoi.c.s
 
-ft_atoi_base.o: ft_atoi_base.c.o
-
-.PHONY : ft_atoi_base.o
-
-# target to build an object file
-ft_atoi_base.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_atoi_base.c.o
-.PHONY : ft_atoi_base.c.o
-
-ft_atoi_base.i: ft_atoi_base.c.i
-
-.PHONY : ft_atoi_base.i
-
-# target to preprocess a source file
-ft_atoi_base.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_atoi_base.c.i
-.PHONY : ft_atoi_base.c.i
-
-ft_atoi_base.s: ft_atoi_base.c.s
-
-.PHONY : ft_atoi_base.s
-
-# target to generate assembly for a file
-ft_atoi_base.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_atoi_base.c.s
-.PHONY : ft_atoi_base.c.s
-
 ft_itoa.o: ft_itoa.c.o
 
 .PHONY : ft_itoa.o
@@ -786,9 +759,6 @@ help:
 	@echo "... ft_atoi.o"
 	@echo "... ft_atoi.i"
 	@echo "... ft_atoi.s"
-	@echo "... ft_atoi_base.o"
-	@echo "... ft_atoi_base.i"
-	@echo "... ft_atoi_base.s"
 	@echo "... ft_itoa.o"
 	@echo "... ft_itoa.i"
 	@echo "... ft_itoa.s"
