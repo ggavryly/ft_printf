@@ -19,16 +19,16 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <limits.h>
-# include <wchar.h>
 
-# define BLACK(x)	"\033[37m"x"\033[0m"
-# define RED(x)		"\033[31m"x"\033[0m"
-# define GREEN(x)	"\033[32m"x"\033[0m"
-# define YELLOW(x)	"\033[33m"x"\033[0m"
-# define BLUE(x)	"\033[34m"x"\033[0m"
-# define PURPLE(x)	"\033[35m"x"\033[0m"
-# define CYAN(x)	"\033[36m"x"\033[0m"
-# define BLACK(x)	"\033[37m"x"\033[0m"
+# define BLACK		"\033[37m"
+# define RED		"\033[31m"
+# define GREEN		"\033[32m"
+# define YELLOW		"\033[33m"
+# define BLUE		"\033[34m"
+# define PURPLE		"\033[35m"
+# define CYAN		"\033[36m"
+# define BLACK		"\033[37m"
+# define END_COLOR	"\033[0m"
 
 typedef struct	s_conv
 {
@@ -55,6 +55,7 @@ typedef struct	s_conv
 int				ft_printf(const char *format, ...);
 
 void			ft_putchar(char c);
+int				ft_strcmp(const char *s1, const char *s2);
 int				ft_atoi(const char *str);
 char			*ft_itoa(intmax_t value, char sig);
 void			ft_putstr(char const *s);
@@ -77,6 +78,7 @@ void			flag_up(t_type *con);
 long double		flag_float(t_type *con);
 char			*float_str(long double k, t_type *con);
 char			*float_up(char *buf);
+int				send_color(t_type *con);
 
 int				print_conv(char con, t_type *c);
 int				print_p(t_type *con);

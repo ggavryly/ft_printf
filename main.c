@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include <limits.h>
-#include "ft_printf.h"
+#include "../../../.Trash/ft_printf/ft_printf.h"
 
-int main(void)
+int main()
 {
-	ft_putstr("-->");
-	printf("<-- ft_printf | exit code - %d\n-->", ft_printf("%#09.0X", 482));
-	printf("<-- printf    | exit code - %d",         printf("%#09.0X", 482));
-	return (0);
+    int k = 1000;
+    ft_putstr("-->");
+    printf("<-- ft_printf | exit code - %d\n-->", ft_printf("%d", -1));
+    printf("<-- printf    | exit code - %d",         printf("%d", -1));
+    return (0);
 }

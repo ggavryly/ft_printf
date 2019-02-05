@@ -29,7 +29,7 @@ int			scan_conv(const char *str, t_type *con, int str_len)
 	if (str[str_len])
 	{
 		initialize_type(con, str[str_len]);
-		if (!ft_strchr("cCspdDioOuUxX%fF", con->conversion))
+		if (!ft_strchr("cCspdDioOuUxX%fFv", con->conversion))
 		{
 			con->conversion = '\0';
 			return (-1);
@@ -66,6 +66,8 @@ int			print_conv(char con, t_type *c)
 		return (print_f(c));
 	else if (con == '%')
 		return (print_perc(c));
+	else if (con == 'v')
+		return (send_color(c));
 	return (0);
 }
 

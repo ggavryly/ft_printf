@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ggavryly/Desktop/printf0
+CMAKE_SOURCE_DIR = /Users/ggavryly/Desktop/My_Projects/ft_printf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ggavryly/Desktop/printf0/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ggavryly/Desktop/My_Projects/ft_printf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles /Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ggavryly/Desktop/My_Projects/ft_printf/cmake-build-debug/CMakeFiles /Users/ggavryly/Desktop/My_Projects/ft_printf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ggavryly/Desktop/printf0/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ggavryly/Desktop/My_Projects/ft_printf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named printf1
+# Target rules for targets named ft_printf
 
 # Build rule for target.
-printf1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 printf1
-.PHONY : printf1
+ft_printf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ft_printf
+.PHONY : ft_printf
 
 # fast build rule for target.
-printf1/fast:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/build
-.PHONY : printf1/fast
+ft_printf/fast:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/build
+.PHONY : ft_printf/fast
 
 conv_c.o: conv_c.c.o
 
@@ -129,7 +129,7 @@ conv_c.o: conv_c.c.o
 
 # target to build an object file
 conv_c.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_c.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_c.c.o
 .PHONY : conv_c.c.o
 
 conv_c.i: conv_c.c.i
@@ -138,7 +138,7 @@ conv_c.i: conv_c.c.i
 
 # target to preprocess a source file
 conv_c.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_c.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_c.c.i
 .PHONY : conv_c.c.i
 
 conv_c.s: conv_c.c.s
@@ -147,7 +147,7 @@ conv_c.s: conv_c.c.s
 
 # target to generate assembly for a file
 conv_c.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_c.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_c.c.s
 .PHONY : conv_c.c.s
 
 conv_d.o: conv_d.c.o
@@ -156,7 +156,7 @@ conv_d.o: conv_d.c.o
 
 # target to build an object file
 conv_d.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_d.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_d.c.o
 .PHONY : conv_d.c.o
 
 conv_d.i: conv_d.c.i
@@ -165,7 +165,7 @@ conv_d.i: conv_d.c.i
 
 # target to preprocess a source file
 conv_d.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_d.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_d.c.i
 .PHONY : conv_d.c.i
 
 conv_d.s: conv_d.c.s
@@ -174,7 +174,7 @@ conv_d.s: conv_d.c.s
 
 # target to generate assembly for a file
 conv_d.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_d.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_d.c.s
 .PHONY : conv_d.c.s
 
 conv_f.o: conv_f.c.o
@@ -183,7 +183,7 @@ conv_f.o: conv_f.c.o
 
 # target to build an object file
 conv_f.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_f.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_f.c.o
 .PHONY : conv_f.c.o
 
 conv_f.i: conv_f.c.i
@@ -192,7 +192,7 @@ conv_f.i: conv_f.c.i
 
 # target to preprocess a source file
 conv_f.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_f.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_f.c.i
 .PHONY : conv_f.c.i
 
 conv_f.s: conv_f.c.s
@@ -201,7 +201,7 @@ conv_f.s: conv_f.c.s
 
 # target to generate assembly for a file
 conv_f.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_f.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_f.c.s
 .PHONY : conv_f.c.s
 
 conv_o.o: conv_o.c.o
@@ -210,7 +210,7 @@ conv_o.o: conv_o.c.o
 
 # target to build an object file
 conv_o.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_o.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_o.c.o
 .PHONY : conv_o.c.o
 
 conv_o.i: conv_o.c.i
@@ -219,7 +219,7 @@ conv_o.i: conv_o.c.i
 
 # target to preprocess a source file
 conv_o.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_o.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_o.c.i
 .PHONY : conv_o.c.i
 
 conv_o.s: conv_o.c.s
@@ -228,7 +228,7 @@ conv_o.s: conv_o.c.s
 
 # target to generate assembly for a file
 conv_o.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_o.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_o.c.s
 .PHONY : conv_o.c.s
 
 conv_p.o: conv_p.c.o
@@ -237,7 +237,7 @@ conv_p.o: conv_p.c.o
 
 # target to build an object file
 conv_p.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_p.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_p.c.o
 .PHONY : conv_p.c.o
 
 conv_p.i: conv_p.c.i
@@ -246,7 +246,7 @@ conv_p.i: conv_p.c.i
 
 # target to preprocess a source file
 conv_p.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_p.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_p.c.i
 .PHONY : conv_p.c.i
 
 conv_p.s: conv_p.c.s
@@ -255,7 +255,7 @@ conv_p.s: conv_p.c.s
 
 # target to generate assembly for a file
 conv_p.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_p.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_p.c.s
 .PHONY : conv_p.c.s
 
 conv_s.o: conv_s.c.o
@@ -264,7 +264,7 @@ conv_s.o: conv_s.c.o
 
 # target to build an object file
 conv_s.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_s.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_s.c.o
 .PHONY : conv_s.c.o
 
 conv_s.i: conv_s.c.i
@@ -273,7 +273,7 @@ conv_s.i: conv_s.c.i
 
 # target to preprocess a source file
 conv_s.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_s.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_s.c.i
 .PHONY : conv_s.c.i
 
 conv_s.s: conv_s.c.s
@@ -282,7 +282,7 @@ conv_s.s: conv_s.c.s
 
 # target to generate assembly for a file
 conv_s.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_s.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_s.c.s
 .PHONY : conv_s.c.s
 
 conv_u.o: conv_u.c.o
@@ -291,7 +291,7 @@ conv_u.o: conv_u.c.o
 
 # target to build an object file
 conv_u.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_u.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_u.c.o
 .PHONY : conv_u.c.o
 
 conv_u.i: conv_u.c.i
@@ -300,7 +300,7 @@ conv_u.i: conv_u.c.i
 
 # target to preprocess a source file
 conv_u.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_u.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_u.c.i
 .PHONY : conv_u.c.i
 
 conv_u.s: conv_u.c.s
@@ -309,7 +309,7 @@ conv_u.s: conv_u.c.s
 
 # target to generate assembly for a file
 conv_u.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_u.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_u.c.s
 .PHONY : conv_u.c.s
 
 conv_x.o: conv_x.c.o
@@ -318,7 +318,7 @@ conv_x.o: conv_x.c.o
 
 # target to build an object file
 conv_x.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_x.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_x.c.o
 .PHONY : conv_x.c.o
 
 conv_x.i: conv_x.c.i
@@ -327,7 +327,7 @@ conv_x.i: conv_x.c.i
 
 # target to preprocess a source file
 conv_x.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_x.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_x.c.i
 .PHONY : conv_x.c.i
 
 conv_x.s: conv_x.c.s
@@ -336,7 +336,7 @@ conv_x.s: conv_x.c.s
 
 # target to generate assembly for a file
 conv_x.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/conv_x.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/conv_x.c.s
 .PHONY : conv_x.c.s
 
 flags.o: flags.c.o
@@ -345,7 +345,7 @@ flags.o: flags.c.o
 
 # target to build an object file
 flags.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/flags.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/flags.c.o
 .PHONY : flags.c.o
 
 flags.i: flags.c.i
@@ -354,7 +354,7 @@ flags.i: flags.c.i
 
 # target to preprocess a source file
 flags.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/flags.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/flags.c.i
 .PHONY : flags.c.i
 
 flags.s: flags.c.s
@@ -363,7 +363,7 @@ flags.s: flags.c.s
 
 # target to generate assembly for a file
 flags.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/flags.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/flags.c.s
 .PHONY : flags.c.s
 
 float_str.o: float_str.c.o
@@ -372,7 +372,7 @@ float_str.o: float_str.c.o
 
 # target to build an object file
 float_str.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/float_str.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/float_str.c.o
 .PHONY : float_str.c.o
 
 float_str.i: float_str.c.i
@@ -381,7 +381,7 @@ float_str.i: float_str.c.i
 
 # target to preprocess a source file
 float_str.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/float_str.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/float_str.c.i
 .PHONY : float_str.c.i
 
 float_str.s: float_str.c.s
@@ -390,7 +390,7 @@ float_str.s: float_str.c.s
 
 # target to generate assembly for a file
 float_str.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/float_str.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/float_str.c.s
 .PHONY : float_str.c.s
 
 ft_atoi.o: ft_atoi.c.o
@@ -399,7 +399,7 @@ ft_atoi.o: ft_atoi.c.o
 
 # target to build an object file
 ft_atoi.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_atoi.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_atoi.c.o
 .PHONY : ft_atoi.c.o
 
 ft_atoi.i: ft_atoi.c.i
@@ -408,7 +408,7 @@ ft_atoi.i: ft_atoi.c.i
 
 # target to preprocess a source file
 ft_atoi.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_atoi.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_atoi.c.i
 .PHONY : ft_atoi.c.i
 
 ft_atoi.s: ft_atoi.c.s
@@ -417,7 +417,7 @@ ft_atoi.s: ft_atoi.c.s
 
 # target to generate assembly for a file
 ft_atoi.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_atoi.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_atoi.c.s
 .PHONY : ft_atoi.c.s
 
 ft_itoa.o: ft_itoa.c.o
@@ -426,7 +426,7 @@ ft_itoa.o: ft_itoa.c.o
 
 # target to build an object file
 ft_itoa.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_itoa.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_itoa.c.o
 .PHONY : ft_itoa.c.o
 
 ft_itoa.i: ft_itoa.c.i
@@ -435,7 +435,7 @@ ft_itoa.i: ft_itoa.c.i
 
 # target to preprocess a source file
 ft_itoa.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_itoa.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_itoa.c.i
 .PHONY : ft_itoa.c.i
 
 ft_itoa.s: ft_itoa.c.s
@@ -444,7 +444,7 @@ ft_itoa.s: ft_itoa.c.s
 
 # target to generate assembly for a file
 ft_itoa.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_itoa.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_itoa.c.s
 .PHONY : ft_itoa.c.s
 
 ft_itoa_base.o: ft_itoa_base.c.o
@@ -453,7 +453,7 @@ ft_itoa_base.o: ft_itoa_base.c.o
 
 # target to build an object file
 ft_itoa_base.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_itoa_base.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_itoa_base.c.o
 .PHONY : ft_itoa_base.c.o
 
 ft_itoa_base.i: ft_itoa_base.c.i
@@ -462,7 +462,7 @@ ft_itoa_base.i: ft_itoa_base.c.i
 
 # target to preprocess a source file
 ft_itoa_base.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_itoa_base.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_itoa_base.c.i
 .PHONY : ft_itoa_base.c.i
 
 ft_itoa_base.s: ft_itoa_base.c.s
@@ -471,7 +471,7 @@ ft_itoa_base.s: ft_itoa_base.c.s
 
 # target to generate assembly for a file
 ft_itoa_base.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_itoa_base.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_itoa_base.c.s
 .PHONY : ft_itoa_base.c.s
 
 ft_printf.o: ft_printf.c.o
@@ -480,7 +480,7 @@ ft_printf.o: ft_printf.c.o
 
 # target to build an object file
 ft_printf.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_printf.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf.c.o
 .PHONY : ft_printf.c.o
 
 ft_printf.i: ft_printf.c.i
@@ -489,7 +489,7 @@ ft_printf.i: ft_printf.c.i
 
 # target to preprocess a source file
 ft_printf.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_printf.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf.c.i
 .PHONY : ft_printf.c.i
 
 ft_printf.s: ft_printf.c.s
@@ -498,7 +498,7 @@ ft_printf.s: ft_printf.c.s
 
 # target to generate assembly for a file
 ft_printf.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_printf.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
 
 ft_putchar.o: ft_putchar.c.o
@@ -507,7 +507,7 @@ ft_putchar.o: ft_putchar.c.o
 
 # target to build an object file
 ft_putchar.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_putchar.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putchar.c.o
 .PHONY : ft_putchar.c.o
 
 ft_putchar.i: ft_putchar.c.i
@@ -516,7 +516,7 @@ ft_putchar.i: ft_putchar.c.i
 
 # target to preprocess a source file
 ft_putchar.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_putchar.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putchar.c.i
 .PHONY : ft_putchar.c.i
 
 ft_putchar.s: ft_putchar.c.s
@@ -525,7 +525,7 @@ ft_putchar.s: ft_putchar.c.s
 
 # target to generate assembly for a file
 ft_putchar.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_putchar.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putchar.c.s
 .PHONY : ft_putchar.c.s
 
 ft_putnbr.o: ft_putnbr.c.o
@@ -534,7 +534,7 @@ ft_putnbr.o: ft_putnbr.c.o
 
 # target to build an object file
 ft_putnbr.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_putnbr.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putnbr.c.o
 .PHONY : ft_putnbr.c.o
 
 ft_putnbr.i: ft_putnbr.c.i
@@ -543,7 +543,7 @@ ft_putnbr.i: ft_putnbr.c.i
 
 # target to preprocess a source file
 ft_putnbr.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_putnbr.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putnbr.c.i
 .PHONY : ft_putnbr.c.i
 
 ft_putnbr.s: ft_putnbr.c.s
@@ -552,7 +552,7 @@ ft_putnbr.s: ft_putnbr.c.s
 
 # target to generate assembly for a file
 ft_putnbr.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_putnbr.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putnbr.c.s
 .PHONY : ft_putnbr.c.s
 
 ft_putstr.o: ft_putstr.c.o
@@ -561,7 +561,7 @@ ft_putstr.o: ft_putstr.c.o
 
 # target to build an object file
 ft_putstr.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_putstr.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putstr.c.o
 .PHONY : ft_putstr.c.o
 
 ft_putstr.i: ft_putstr.c.i
@@ -570,7 +570,7 @@ ft_putstr.i: ft_putstr.c.i
 
 # target to preprocess a source file
 ft_putstr.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_putstr.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putstr.c.i
 .PHONY : ft_putstr.c.i
 
 ft_putstr.s: ft_putstr.c.s
@@ -579,7 +579,7 @@ ft_putstr.s: ft_putstr.c.s
 
 # target to generate assembly for a file
 ft_putstr.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_putstr.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putstr.c.s
 .PHONY : ft_putstr.c.s
 
 ft_strchr.o: ft_strchr.c.o
@@ -588,7 +588,7 @@ ft_strchr.o: ft_strchr.c.o
 
 # target to build an object file
 ft_strchr.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strchr.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strchr.c.o
 .PHONY : ft_strchr.c.o
 
 ft_strchr.i: ft_strchr.c.i
@@ -597,7 +597,7 @@ ft_strchr.i: ft_strchr.c.i
 
 # target to preprocess a source file
 ft_strchr.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strchr.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strchr.c.i
 .PHONY : ft_strchr.c.i
 
 ft_strchr.s: ft_strchr.c.s
@@ -606,8 +606,35 @@ ft_strchr.s: ft_strchr.c.s
 
 # target to generate assembly for a file
 ft_strchr.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strchr.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strchr.c.s
 .PHONY : ft_strchr.c.s
+
+ft_strcmp.o: ft_strcmp.c.o
+
+.PHONY : ft_strcmp.o
+
+# target to build an object file
+ft_strcmp.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strcmp.c.o
+.PHONY : ft_strcmp.c.o
+
+ft_strcmp.i: ft_strcmp.c.i
+
+.PHONY : ft_strcmp.i
+
+# target to preprocess a source file
+ft_strcmp.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strcmp.c.i
+.PHONY : ft_strcmp.c.i
+
+ft_strcmp.s: ft_strcmp.c.s
+
+.PHONY : ft_strcmp.s
+
+# target to generate assembly for a file
+ft_strcmp.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strcmp.c.s
+.PHONY : ft_strcmp.c.s
 
 ft_strlen.o: ft_strlen.c.o
 
@@ -615,7 +642,7 @@ ft_strlen.o: ft_strlen.c.o
 
 # target to build an object file
 ft_strlen.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strlen.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strlen.c.o
 .PHONY : ft_strlen.c.o
 
 ft_strlen.i: ft_strlen.c.i
@@ -624,7 +651,7 @@ ft_strlen.i: ft_strlen.c.i
 
 # target to preprocess a source file
 ft_strlen.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strlen.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strlen.c.i
 .PHONY : ft_strlen.c.i
 
 ft_strlen.s: ft_strlen.c.s
@@ -633,7 +660,7 @@ ft_strlen.s: ft_strlen.c.s
 
 # target to generate assembly for a file
 ft_strlen.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/ft_strlen.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strlen.c.s
 .PHONY : ft_strlen.c.s
 
 help.o: help.c.o
@@ -642,7 +669,7 @@ help.o: help.c.o
 
 # target to build an object file
 help.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/help.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/help.c.o
 .PHONY : help.c.o
 
 help.i: help.c.i
@@ -651,7 +678,7 @@ help.i: help.c.i
 
 # target to preprocess a source file
 help.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/help.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/help.c.i
 .PHONY : help.c.i
 
 help.s: help.c.s
@@ -660,7 +687,7 @@ help.s: help.c.s
 
 # target to generate assembly for a file
 help.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/help.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/help.c.s
 .PHONY : help.c.s
 
 main.o: main.c.o
@@ -669,7 +696,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/main.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -678,7 +705,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/main.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -687,7 +714,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/main.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.s
 .PHONY : main.c.s
 
 scan_conv.o: scan_conv.c.o
@@ -696,7 +723,7 @@ scan_conv.o: scan_conv.c.o
 
 # target to build an object file
 scan_conv.c.o:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/scan_conv.c.o
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/scan_conv.c.o
 .PHONY : scan_conv.c.o
 
 scan_conv.i: scan_conv.c.i
@@ -705,7 +732,7 @@ scan_conv.i: scan_conv.c.i
 
 # target to preprocess a source file
 scan_conv.c.i:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/scan_conv.c.i
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/scan_conv.c.i
 .PHONY : scan_conv.c.i
 
 scan_conv.s: scan_conv.c.s
@@ -714,7 +741,7 @@ scan_conv.s: scan_conv.c.s
 
 # target to generate assembly for a file
 scan_conv.c.s:
-	$(MAKE) -f CMakeFiles/printf1.dir/build.make CMakeFiles/printf1.dir/scan_conv.c.s
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/scan_conv.c.s
 .PHONY : scan_conv.c.s
 
 # Help Target
@@ -725,7 +752,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... printf1"
+	@echo "... ft_printf"
 	@echo "... conv_c.o"
 	@echo "... conv_c.i"
 	@echo "... conv_c.s"
@@ -780,6 +807,9 @@ help:
 	@echo "... ft_strchr.o"
 	@echo "... ft_strchr.i"
 	@echo "... ft_strchr.s"
+	@echo "... ft_strcmp.o"
+	@echo "... ft_strcmp.i"
+	@echo "... ft_strcmp.s"
 	@echo "... ft_strlen.o"
 	@echo "... ft_strlen.i"
 	@echo "... ft_strlen.s"

@@ -12,21 +12,6 @@
 
 #include "ft_printf.h"
 
-void		ft_putnstr(const char *str, int n)
-{
-	int i;
-
-	i = 0;
-	if (str)
-	{
-		while (i < n && str[i])
-		{
-			ft_putchar(str[i]);
-			i++;
-		}
-	}
-}
-
 intmax_t	flag_intdi(t_type *con)
 {
 	intmax_t k;
@@ -104,4 +89,21 @@ char		*float_up(char *buf)
 		i++;
 	}
 	return (buf);
+}
+
+int			send_color(t_type *con)
+{
+	char	*color;
+
+	color = va_arg(con->ap, char *);
+	if (!ft_strcmp(color, RED) ||
+		!ft_strcmp(color, BLACK) ||
+		!ft_strcmp(color, BLUE) ||
+		!ft_strcmp(color, GREEN) ||
+		!ft_strcmp(color, YELLOW) ||
+		!ft_strcmp(color, PURPLE) ||
+		!ft_strcmp(color, CYAN) ||
+		!ft_strcmp(color, END_COLOR))
+		ft_putstr(color);
+	return (0);
 }

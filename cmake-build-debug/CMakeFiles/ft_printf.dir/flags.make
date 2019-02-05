@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/ggavryly/Desktop/printf0/../../Desktop/printf0 
+C_INCLUDES = -I/Users/ggavryly/Desktop/My_Projects/ft_printf/../../Desktop/My_projects/ft_printf 
 

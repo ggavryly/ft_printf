@@ -139,6 +139,9 @@
 		<Unit filename="/Users/ggavryly/Desktop/printf0/ft_strchr.c">
 			<Option target="printf1"/>
 		</Unit>
+		<Unit filename="/Users/ggavryly/Desktop/printf0/ft_strcmp.c">
+			<Option target="printf1"/>
+		</Unit>
 		<Unit filename="/Users/ggavryly/Desktop/printf0/ft_strlen.c">
 			<Option target="printf1"/>
 		</Unit>
