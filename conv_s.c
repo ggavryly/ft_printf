@@ -26,18 +26,16 @@ static void	field_put(t_type *con, int field, int print)
 			write(1, " ", 1);
 }
 
-static void	field(char *str, t_type *con)
+static void	field(t_type *con, int strlen)
 {
 	int field;
-	int strlen;
 	int print;
 
-	strlen = ft_strlen(str);
 	print = 0;
 	field = con->field_width;
 	if (con->precision > 0)
 	{
-		if (strlen < con->precision)
+		if (strlen <= con->precision)
 			print = strlen;
 		else if (con->precision < strlen)
 			print = con->precision;
@@ -53,33 +51,6 @@ static void	field(char *str, t_type *con)
 		else
 			field_put(con, field, print);
 	}
-}
-
-static void	print_null(t_type *con)
-{
-	char	*k;
-	int		i;
-
-	k = "(null)";
-	i = 0;
-	if (con->precision != -1)
-	{
-		if (con->precision)
-		{
-			while (k[i] && con->precision--)
-			{
-				con->print++;
-				ft_putchar(k[i++]);
-			}
-		}
-		else
-		{
-			ft_putstr("(null)");
-			con->print += 6;
-		}
-	}
-	else if (con->precision == -1)
-		field(NULL, con);
 }
 
 static void	precision(char *str, t_type *con, int strlen)
@@ -100,7 +71,7 @@ static void	precision(char *str, t_type *con, int strlen)
 			}
 		}
 	}
-	else if (prec == 0 || strlen < prec)
+	else if (prec == 0 || strlen <= prec)
 	{
 		con->print += strlen;
 		ft_putstr(str);
@@ -116,17 +87,17 @@ int			print_s(t_type *con)
 	strlen = ft_strlen(c);
 	if (!c)
 	{
-		print_null(con);
-		return (con->print);
+		c = "(null)";
+		strlen = 6;
 	}
 	if (con->left_ali)
 		precision(c, con, strlen);
 	if (con->left_ali)
 		if (con->field_width)
-			field(c, con);
+			field(con, strlen);
 	if (con->right_ali)
 		if (con->field_width)
-			field(c, con);
+			field(con, strlen);
 	if (con->right_ali)
 		precision(c, con, strlen);
 	return (con->print);

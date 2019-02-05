@@ -78,9 +78,7 @@ static void	field(t_type *con, int strlen, char *str, uintmax_t *k)
 		print += prec - strlen;
 	else if (prec < strlen && prec > 0)
 		print = strlen;
-	else
-		print += (prec == -1) ? 0 : prec;
-	if (con->alt_form)
+	if (con->alt_form && str[0] != '0')
 		print += 2;
 	field -= print;
 	if (con->zero_pad && !con->left_ali)

@@ -34,7 +34,7 @@ static void	sign(intmax_t *k, t_type *con)
 
 static void	zero_pad(int field, t_type *con, intmax_t *k)
 {
-	if (con->sign || con->space || *k < 0)
+	if ((con->sign || con->space || *k < 0) && !con->precision)
 		sign(k, con);
 	if (field >= 0 && !con->precision)
 	{
@@ -50,7 +50,7 @@ static void	zero_pad(int field, t_type *con, intmax_t *k)
 	}
 }
 
-static int	precision(intmax_t k, t_type *con, int strlen)
+static int	precision(t_type *con, int strlen, char *str)
 {
 	int print;
 	int prec;
@@ -64,7 +64,7 @@ static int	precision(intmax_t k, t_type *con, int strlen)
 		while (prec-- > 0)
 			write(1, "0", 1);
 	}
-	else if (prec == -1 && k == 0)
+	else if (prec == -1 && str[0] == '0')
 		return (-1);
 	else if (prec == 0 || prec < print)
 		con->print += print;
@@ -84,8 +84,6 @@ static void	field(t_type *con, int strlen, char *str, intmax_t *k)
 		print += prec - strlen;
 	else if (prec < strlen && prec > 0)
 		print = strlen;
-	else
-		print += (prec == -1) ? 0 : prec;
 	if (con->sign || *k < 0 || con->space)
 		print += 1;
 	field -= print;
@@ -118,7 +116,7 @@ int			print_d(t_type *con)
 	if (con->sign || k < 0 || con->space)
 		sign(&k, con);
 	if (con->precision || strlen)
-		if (precision(k, con, strlen) != -1)
+		if (precision(con, strlen, str) != -1)
 			ft_putstr(str);
 	if (con->left_ali)
 		if (con->field_width)

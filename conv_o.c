@@ -39,6 +39,8 @@ static void	zero_pad(int field, t_type *con, uintmax_t *k)
 	}
 	else if (field >= 0)
 	{
+		if (*k == 0 && con->precision == -1 && con->alt_form)
+			field--;
 		con->print += field;
 		while (field-- > 0)
 			write(1, " ", 1);
@@ -79,9 +81,7 @@ static void	field(t_type *con, int strlen, char *str, uintmax_t *k)
 		print += prec - strlen;
 	else if (prec < strlen && prec > 0)
 		print = strlen;
-	else
-		print += (prec == -1) ? 0 : prec;
-	if (con->alt_form && *k != 0)
+	if (con->alt_form && str[0] != '0')
 		print += 1;
 	field -= print;
 	if (con->zero_pad && !con->left_ali)

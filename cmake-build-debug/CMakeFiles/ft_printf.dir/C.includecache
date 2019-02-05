@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/ggavryly/.Trash/ft_printf/ft_printf.h
+/Users/ggavryly/Desktop/My_Projects/ft_printf/conv_s.c
+ft_printf.h
+/Users/ggavryly/Desktop/My_Projects/ft_printf/ft_printf.h
+
+/Users/ggavryly/Desktop/My_Projects/ft_printf/ft_printf.h
 stdarg.h
 -
 string.h
@@ -15,12 +19,8 @@ stdlib.h
 -
 unistd.h
 -
+stdint.h
+-
 limits.h
 -
-
-/Users/ggavryly/Desktop/My_Projects/ft_printf/main.c
-stdio.h
--
-../../../.Trash/ft_printf/ft_printf.h
-/Users/ggavryly/.Trash/ft_printf/ft_printf.h
 

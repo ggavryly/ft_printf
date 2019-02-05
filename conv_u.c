@@ -62,8 +62,6 @@ static void	field(t_type *con, int strlen, char *str)
 		print += prec - strlen;
 	else if (prec < strlen && prec > 0)
 		print = strlen;
-	else
-		print += (prec == -1) ? 0 : prec;
 	field -= print;
 	if (con->zero_pad && !con->left_ali)
 		zero_pad(field, con);
