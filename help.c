@@ -67,28 +67,30 @@ long double	flag_float(t_type *con)
 	return (k);
 }
 
-char		*float_up(char *buf)
+long double	float_up(long double nbr, int precision)
 {
-	int i;
-	int start;
+	long double		f;
+	int				n;
 
-	start = 0;
-	while (buf[start] != '.')
-		start++;
-	start++;
-	i = start;
-	while (buf[i])
+	if (precision >= 0)
 	{
-		if (buf[i] == ':')
-		{
-			buf[i] = '0';
-			buf[i - 1] += 1;
-			i = start;
-			continue ;
-		}
-		i++;
+		f = 0.5;
+		n = 0;
+		while (n++ < precision)
+			f /= 10;
+		if (nbr > 0)
+			nbr += f;
+		else if (nbr < 0)
+			nbr -= f;
 	}
-	return (buf);
+	else
+	{
+		if (nbr < 0)
+			nbr -= 0.0000005;
+		else if (nbr > 0)
+			nbr += 0.0000005;
+	}
+	return (nbr);
 }
 
 int			send_color(t_type *con)

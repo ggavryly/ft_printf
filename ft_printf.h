@@ -77,7 +77,7 @@ intmax_t		flag_intoux(t_type *con);
 void			flag_up(t_type *con);
 long double		flag_float(t_type *con);
 char			*float_str(long double k, t_type *con);
-char			*float_up(char *buf);
+long double		float_up(long double nbr, int precision);
 int				send_color(t_type *con);
 
 int				print_conv(char con, t_type *c);

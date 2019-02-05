@@ -46,8 +46,6 @@ static void	float_put_after(char **str, int *len, long double k, int *iter)
 		k *= 10;
 	}
 	tmp[i - 1] += (((long long)(k * 10.0) % 10) >= 5) ? (1) : (0);
-	if (tmp[i - 1] == ':')
-		tmp = float_up(tmp);
 	*str = tmp;
 }
 

@@ -36,7 +36,7 @@ static void	zero_pad(int field, t_type *con, long double *k)
 {
 	if (con->sign || con->space || *k < 0.0)
 		sign(k, con);
-	if (field >= 0 && !con->precision)
+	if (field >= 0)
 	{
 		con->print += field;
 		while (field-- > 0)
@@ -77,6 +77,7 @@ int			print_f(t_type *con)
 	char		*buf;
 
 	k = flag_float(con);
+	k = float_up(k, (con->precision ? con->precision : 6));
 	buf = float_str(((k < 0.0) ? (-k) : (k)), con);
 	len = ft_strlen(buf);
 	if (con->right_ali)
